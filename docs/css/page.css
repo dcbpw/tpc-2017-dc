@@ -1,12 +1,16 @@
 body {
   background: url(../img/bg-tiled.jpg);
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
 
 .page {
   margin: 2em;
   background-color: white;
-  border: 1px solid black; }
+  border: 1px solid black;
+  max-width: 1024px; }
 
 .header {
   display: flex;
