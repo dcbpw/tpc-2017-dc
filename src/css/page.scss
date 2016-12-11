@@ -1,0 +1,71 @@
+
+// Debugging
+
+
+body {
+  background: url(/img/bg-tiled.jpg);
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  margin: 2em;
+  // background-color: rgba(255,255,255,0.7);
+  background-color: white;
+  border: 1px solid black;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  // justify-content: center;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    flex-flow: column wrap;
+    text-align: center;
+  }
+
+  .media {
+    flex-flow: column nowrap;
+    text-align: center;
+    margin-left: 2em;
+    a {
+      display: block;
+      margin: 0.5em;
+    }
+    img {
+      width: 20px;
+    }
+  }
+
+  .logo {
+    margin-right: 2em;
+    img {
+    width: 200px;
+  }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: #888;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}
+
+.content {
+  margin: 1em;
+}

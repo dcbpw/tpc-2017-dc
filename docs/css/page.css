@@ -1,0 +1,50 @@
+body {
+  background: url(/img/bg-tiled.jpg);
+  margin: 0;
+  padding: 0; }
+
+.page {
+  margin: 2em;
+  background-color: white;
+  border: 1px solid black; }
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+  .header .title {
+    flex-flow: column wrap;
+    text-align: center; }
+  .header .media {
+    flex-flow: column nowrap;
+    text-align: center;
+    margin-left: 2em; }
+    .header .media a {
+      display: block;
+      margin: 0.5em; }
+    .header .media img {
+      width: 20px; }
+  .header .logo {
+    margin-right: 2em; }
+    .header .logo img {
+      width: 200px; }
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .nav a {
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: #888;
+    flex-grow: 1;
+    text-align: center;
+    color: white; }
+    .nav a:hover {
+      background-color: #ccc; }
+
+.content {
+  margin: 1em; }
+
+/*# sourceMappingURL=page.css.map */
