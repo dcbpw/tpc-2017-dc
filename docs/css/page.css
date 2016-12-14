@@ -4,7 +4,9 @@ body {
   padding: 0;
   display: flex;
   flex-flow: column wrap;
-  align-items: center; }
+  align-items: center;
+  font-size: 120%;
+  line-spacing: 1.1em; }
 
 .page {
   margin: 2em;
@@ -62,7 +64,8 @@ body {
       background-color: #624e36; }
 
 .content {
-  margin: 1em; }
+  margin: 1em;
+  padding: 0 2em; }
 
 .map-uspto {
   float: right; }

@@ -2,6 +2,7 @@
 // Debugging
 
 
+// color scheme
 $bgbase: #a4825a;
 $darker: darken($bgbase, 10%);
 $darkerer: darken($bgbase, 20%);
@@ -16,6 +17,8 @@ body {
   // justify-content: center;
   align-items: center;
   // font-size: 1.2vmin;
+  font-size: 120%;
+  line-spacing: 1.1em;
 }
 
 .page {
@@ -103,6 +106,7 @@ body {
 
 .content {
   margin: 1em;
+  padding: 0 2em;
 }
 
 .map-uspto {
