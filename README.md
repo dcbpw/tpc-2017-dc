@@ -11,7 +11,8 @@ This is the website for The Perl Conference 2017 in Washington, DC.
 ## Workflow
 
 Run `./build.sh` to process everything in src and put it into docs. The files
-in docs are what are actually served to end-users.
+in docs are what are actually served to end-users. This runs Template Toolkit
+and sass.
 
 I like live-reload workflow, and I found this one that seems to work:
 
