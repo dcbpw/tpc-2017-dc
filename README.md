@@ -24,6 +24,7 @@ I like live-reload workflow, and I found this one that seems to work:
 
     # Window 1: Serves static content and live-reloads when files change
     live-server --wait=0 --mount=/tpc-2017-dc:docs --open=/tpc-2017-dc
+    live-server --wait=0 # if no subdir
 
     # Window 2: Watch for file changes, and then re-execute the build script
     watcher --dir src -- ./build.sh
