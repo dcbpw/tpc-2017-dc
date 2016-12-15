@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="nav">
-        <a href="./">News</a>
+        <a href="./">Home & News</a>
         <a href="register/">Register</a>
         <a href="cfp/">CFP</a>
         <!-- <a href="/">Schedule</a> -->
@@ -59,7 +59,7 @@ body {
   align-items: center;
   // font-size: 1.2vmin;
   font-size: 120%;
-  line-spacing: 1.1em;
+  line-height: 1.4em;
 }
 
 .page {
@@ -83,6 +83,7 @@ body {
   display: flex;
     flex-flow: column wrap;
     text-align: center;
+    margin: 1em;
 
     h1 {
       margin: 0;

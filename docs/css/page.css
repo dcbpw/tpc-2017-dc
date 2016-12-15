@@ -6,7 +6,7 @@ body {
   flex-flow: column wrap;
   align-items: center;
   font-size: 120%;
-  line-spacing: 1.1em; }
+  line-height: 1.4em; }
 
 .page {
   margin: 2em;
@@ -23,7 +23,8 @@ body {
   .header .title {
     display: flex;
     flex-flow: column wrap;
-    text-align: center; }
+    text-align: center;
+    margin: 1em; }
     .header .title h1 {
       margin: 0;
       padding: 0; }
