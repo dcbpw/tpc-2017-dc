@@ -1,0 +1,18 @@
+
+[% USE Markdown %]
+[% FILTER markdown %]
+
+# Hotel 
+
+While there are several hotels surrounding the United States Patent Office in Alexandria, VA we recommend staying at The Holiday Inn - Carlyle. Use group code ??? for our special nightly rate of $179.00.
+<BR>
+<BR>
+<a href src="https://www.ihg.com/holidayinn/hotels/us/en/alexandria/axetd/hoteldetail">Holiday Inn Alexandria @ Carlyle</a>
+<BR>
+2460 Eisenhower Ave
+<BR>
+Alexandria, VA 22314
+<BR>
+1(703)960-2000
+
+[%-END %]

@@ -19,7 +19,7 @@
         <div class="title">
           <h1>The Perl Conference</h1>
           <h2>2017 - Washington, DC</h2>
-          <h3>(not quite known as YAPC::NA 2017)</h3>
+          <h3>(YAPC::NA 2017)</h3>
         </div>
         <div class="media">
           <a href="/"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png"></a>
@@ -33,6 +33,7 @@
         <a href="cfp/">CFP</a>
         <!-- <a href="/">Schedule</a> -->
         <a href="location/">Location</a>
+        <a href="hotel/">Where to stay</a>
         <a href="soc/">Standards of Conduct</a>
         <a href="https://github.com/dcbpw/tpc-2017-dc/wiki">Wiki</a>
         <a href="contact/">Contact</a>
