@@ -13,6 +13,10 @@ This is simply at attempt to turn an image in my head into CSS/HTML/SVG.  I'm no
 * It's okay, so far, for mobile
 * The map is a screenshot from a leaflet style that seemed appropriate... we'd probably be better off just usting a leaflet directly, but I had some trouble getting the original iframe map to play with attempts to tuck it neatly into the figure frame.
 
+## Not a replacement!
+
+This is just stolen from the front page of the pre-existing draft; no attempt to conform to anything or use the rest... expression of aesthetic only.  Just switch your branch and run something like ( python -m SimpleHTTPServer 8000 ) for a look.
+
 ## Author
 
 J.E. Turcotte
