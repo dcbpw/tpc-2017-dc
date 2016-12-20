@@ -1,9 +1,0 @@
-
-[% USE Markdown %]
-[% FILTER markdown %]
-
-# Location
-
-Located just inside of the DC Beltway, The Perl Conference will be hosted at the US Patent Office in Alexandria, VA. This location is metro accessible, and is only two stops from the DC Airport (DCA).
-
-[%-END %]

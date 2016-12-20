@@ -1,0 +1,65 @@
+@font-face {
+    font-family: patent-figure;
+    src: url("/assets/fonts/SwankyandMooMoo.ttf");
+}
+
+.swiss-saw-illustration {
+	margin: 1em 10% 1em 10%;
+	width: 80%;
+	height: 80%;
+}
+
+.remove-the-top-margin {
+	margin-top: 0px;
+}
+
+.splash-margin {
+	margin-top: 150px;
+}
+
+.illustration-background {
+	background-image: url("/assets/img/old-paper.png");
+	background-position: 25% center;
+}
+
+.illustration-container {
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.double-border {
+	border: 4px double rgba(0,0,0,0.65);
+}
+
+.illustration-dark {
+	background-color: rgba(100,50,0,0.4);
+	color: #FFF;
+}
+
+.illustration-light {
+	background-color: rgba(255,255,255,0.4);
+	color: #210;
+}
+
+.illustration-font .illustration-header .illustration-footer { 
+	font-family: patent-figure;
+}
+
+.illustration-header {
+	font-size: 2em;
+	margin: -0.4em 1em;
+}
+
+.illustration-footer {
+	margin-top: -0.35em;
+	text-align: right;
+}
+
+.map-corrections {
+	margin-left: -100px;
+	float:right;
+}
+
+#mapid { height: 300px; }
+
+.illustration-
