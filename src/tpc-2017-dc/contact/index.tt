@@ -3,7 +3,8 @@
 [% FILTER markdown %]
 
 # Contact
-porated in the state of Michigan, United States of America.
+
+The North American Yet Another Perl Conference (YAPC::NA) is a production of the Yet Another Society doing business as [The Perl Foundation](http://www.perlfoundation.org/), a non-profit organization incorporated in the state of Michigan, United States of America.
 
     The Perl Foundation
     340 S Lemon Ave #6055
@@ -16,4 +17,4 @@ Inquiries regarding registrations, payments, or sponsorship may be sent to [trea
 
 Invoices or refund requests may be sent by postal mail or e-mailed to [payments@perlfoundation.org](mailto:payments@perlfoundation.org)
 
-[%-END %]
+[% END %]

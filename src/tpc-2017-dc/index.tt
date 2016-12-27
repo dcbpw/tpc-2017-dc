@@ -1,7 +1,8 @@
 
 <div class="flex-row">
   <div class="flex-col" style="flex-basis: 0px; flex-grow: 1; margin-right: 1em">
-    <p>The Perl Conference 2017 is located in Alexandria, VA, a stones-throw from Washington, DC. It's a high-quality, inexpensive technical conference with its roots in the Perl Mongers user groups. The conference celebrates the Perl programming language and is meant to be accessible to anyone, regardless of experience, yet valuable to even the most skilled of programmers.</p>
+
+    <p>The Perl Conference 2017 is being held at the US Patent and Trademark Office (USPTO) in Alexandria, VA, in the Washington, DC metro area. It's a high-quality, inexpensive technical conference with its roots in the Perl Mongers user groups. The conference celebrates the Perl programming language and community, and is meant to be accessible to anyone, regardless of experience, yet valuable to even the most skilled of programmers.</p>
 
     <p>Each year the conference attracts hundreds of programmers from around the world, including luminaries such as Larry Wall, Randal Schwartz, and Damian Conway.</p>
 
@@ -20,7 +21,17 @@
   </div>
 </div>
 
-<!-- <hr> -->
+<hr>
+
+<h2>News</h2>
+
+<div class="twitter-news">
+<a
+data-chrome="noheader nofooter noscrollbar transparent"
+class="twitter-timeline"
+href="https://twitter.com/perlfoundation">News</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
 
 <!-- <div class="news-entry"> -->
 <!--   <h1>Call For Presentations</h1> -->

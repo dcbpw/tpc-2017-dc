@@ -9,8 +9,8 @@ body {
   line-height: 1.4em; }
 
 .page {
-  margin: 2em;
-  background-color: white;
+  margin: 1em;
+  background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid black;
   max-width: 1024px; }
 
@@ -44,10 +44,9 @@ body {
       margin: 0.5em; }
     .header .media img {
       width: 20px; }
-  .header .logo {
-    margin-right: 2em; }
-    .header .logo img {
-      width: 20vmin; }
+  .header .logo img {
+    margin: 1em;
+    width: 200px; }
 
 .nav {
   display: flex;
@@ -65,9 +64,13 @@ body {
       background-color: #624e36; }
 
 .content {
-  margin: 1em;
+  margin: 1em 0.1em;
   padding: 0 2em; }
 
+@media (max-width: 768px) {
+  .content {
+    font-size: 90%;
+    padding: 0 2em; } }
 .map-uspto {
   float: right; }
 
@@ -80,5 +83,8 @@ body {
 .flex-col {
   display: flex;
   flex-flow: column wrap; }
+
+.twitter-news {
+  background-color: rgba(255, 255, 255, 0.5); }
 
 /*# sourceMappingURL=page.css.map */
