@@ -51,8 +51,7 @@ $darker: darken($bgbase, 10%);
 $darkerer: darken($bgbase, 20%);
 
 body {
-  // background: url(../img/bg-tiled.jpg);
-  background: url(../img/bg-tiled-v2.jpg);
+  background: $bgbase url(../img/bg-tiled-v2.jpg);
   margin: 0;
   padding: 0;
   display: flex;
@@ -72,6 +71,7 @@ body {
   // background-color: white;
   border: 1px solid black;
   max-width: 1024px;
+  border-radius: 25px;
 }
 
 

@@ -1,5 +1,5 @@
 body {
-  background: url(../img/bg-tiled-v2.jpg);
+  background: #a4825a url(../img/bg-tiled-v2.jpg);
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,7 +12,8 @@ body {
   margin: 1em;
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid black;
-  max-width: 1024px; }
+  max-width: 1024px;
+  border-radius: 25px; }
 
 .header {
   display: flex;
