@@ -67,18 +67,20 @@ body {
   margin: 1em 0.1em;
   padding: 0 2em; }
 
-@media (max-width: 768px) {
-  .content {
-    font-size: 90%;
-    padding: 0 2em; } }
 .map-uspto {
   float: right; }
 
 .flex-row {
   display: flex;
   flex-flow: row wrap;
-  flex-basis: 0;
   justify-content: space-between; }
+
+.logo-row img {
+  height: 100px;
+  border: 1px solid black; }
+  @media (max-width: 768px) {
+    .logo-row img {
+      height: 50px; } }
 
 .flex-col {
   display: flex;

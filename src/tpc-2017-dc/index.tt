@@ -17,8 +17,18 @@
 
   <br>
 
-  <img width="200px" src="https://www.novascientia.net/project_images/USPTO%20Headquarters.jpg">
   </div>
+
+</div>
+
+<div class="flex-row logo-row">
+  <a href="https://en.wikipedia.org/wiki/United_States_Patent_and_Trademark_Office"><img src="/tpc-2017-dc/img/USPTOHeadquarters.jpg"></a>
+  <a href="http://www.uspto.gov/"><img src="/tpc-2017-dc/img/uspto-logo.png"></a>
+  <img src="/tpc-2017-dc/img/440px-Cherry_Blossoms_and_Washington_Monument.jpg">
+  <img src="/tpc-2017-dc/img/440px-LEnfant_plan.jpg">
+  <img src="/tpc-2017-dc/img/440px-Lincolnmemorial_by_dusk.jpg">
+  <img src="/tpc-2017-dc/img/440px-SmithsonianCastel_07120014.jpg">
+  <img src="/tpc-2017-dc/img/440px-WhiteHouseSouthFacade.jpg">
 </div>
 
 <hr>
@@ -32,7 +42,6 @@
   class="twitter-timeline"
   href="https://twitter.com/perlconferences"
 >News: @perlconferences twitter feed</a>
-<script async src="/tpc-2017-dc/js/widgets.js" charset="utf-8"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-<!-- <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
