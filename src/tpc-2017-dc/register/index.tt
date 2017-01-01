@@ -8,7 +8,7 @@
 [% USE Markdown %]
 [% FILTER markdown %]
 
-### Standard pass
+## Standard pass
 Regular admission: $250
 Late registration: $350 (14 days prior to the first event)
 
