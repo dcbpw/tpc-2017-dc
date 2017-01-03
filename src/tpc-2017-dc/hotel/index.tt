@@ -2,12 +2,12 @@
 [% USE Markdown %]
 [% FILTER markdown %]
 
-# Hotel 
+# Hotel
 
-While there are several hotels surrounding the United States Patent Office in Alexandria, VA we recommend staying at The Holiday Inn - Carlyle. Use group code ??? for our special nightly rate of $179.00.
+While there are several hotels surrounding the United States Patent Office in Alexandria, VA we recommend staying at The Holiday Inn - Carlyle. [Follow this link or use group code TPC for our special nightly rate of $179.00](https://www.ihg.com/holidayinn/hotels/us/en/reservation/book?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn.ki.sp.nd.ct&qChld=0&qCiD=16&qCiMy=052017&qCoD=23&qCoMy=052017&qDest=2460+Eisenhower+Avenue+Alexandria+Virginia+United+States&qFRA=1&qGRM=0&qGrpCd=TPC&qHtlC=axetd&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=20&qRtP=6CBARC&qSHp=1&qSlH=axetd&qSmP=3&qSrt=sBR&qWch=0&srb_u=1&method=redirect&icdv=99801505&icdv=99801505#roomratestitle)
 <BR>
 <BR>
-<a href src="https://www.ihg.com/holidayinn/hotels/us/en/alexandria/axetd/hoteldetail">Holiday Inn Alexandria @ Carlyle</a>
+<a href src="https://www.ihg.com/holidayinn/hotels/us/en/reservation/book?qAdlt=1&qBrs=6c.hi.ex.rs.ic.cp.in.sb.cw.cv.ul.vn.ki.sp.nd.ct&qChld=0&qCiD=16&qCiMy=052017&qCoD=23&qCoMy=052017&qDest=2460+Eisenhower+Avenue+Alexandria+Virginia+United+States&qFRA=1&qGRM=0&qGrpCd=TPC&qHtlC=axetd&qPSt=0&qRRSrt=rt&qRef=df&qRms=1&qRpn=1&qRpp=20&qRtP=6CBARC&qSHp=1&qSlH=axetd&qSmP=3&qSrt=sBR&qWch=0&srb_u=1&method=redirect&icdv=99801505&icdv=99801505#roomratestitle">Holiday Inn Alexandria @ Carlyle</a>
 <BR>
 2460 Eisenhower Ave
 <BR>
