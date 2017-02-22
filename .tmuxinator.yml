@@ -1,0 +1,11 @@
+---
+name: tpc-2017-dc
+root: <%= File.dirname(File.absolute_path(__FILE__)) %>
+
+windows:
+    - editor:
+    - builder:
+        layout: even-horizontal
+        panes:
+            - carton exec watcher --dir src -- bundle exec ./build.sh
+            - ./node_modules/.bin/live-server --wait=0 --mount=/:docs --open=/tpc-2017-dc
