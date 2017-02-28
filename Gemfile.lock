@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    erubis (2.7.0)
+    sass (3.4.23)
+    thor (0.19.4)
+    tmuxinator (0.9.0)
+      erubis (~> 2.6)
+      thor (~> 0.19, >= 0.15.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  sass
+  tmuxinator
+
+BUNDLED WITH
+   1.14.5

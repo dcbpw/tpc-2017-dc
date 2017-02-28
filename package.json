@@ -1,0 +1,22 @@
+{
+    "name":     "tpc-2017-dc",
+    "version":  "1.0.0",
+    "homepage": "http://www.perlconference.us/tpc-2017-dc/",
+
+    "description":
+        "Website for The Perl Conference (TPC) in Washington, DC/Alexandria in June, 2017",
+    "keywords": [
+        "Perl", "TPC", "YAPC", "YAPC::NA", "Conference", "DC", "Alexandria",
+        "Washington", "Site"
+    ],
+
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/dcbpw/tpc-2017-dc.git"
+    },
+    "bugs": "https://github.com/dcbpw/tpc-2017-dc/issues",
+
+    "devDependencies": {
+        "live-server": "*"
+    }
+}

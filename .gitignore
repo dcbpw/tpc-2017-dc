@@ -1,1 +1,9 @@
+# cache for generated files
 .sass-cache
+
+# vendored code
+.bundle
+bin
+vendor
+local
+node_modules
