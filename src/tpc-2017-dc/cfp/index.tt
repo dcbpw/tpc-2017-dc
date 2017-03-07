@@ -9,8 +9,8 @@ The Perl Conference 2017 in DC call for speakers is now open!
 [% END %]
 
   <a target="_blank"
-    style="display: block; border: 1px solid black; background-color: #00cc00; padding: 1em;color: white; font-weight: bold; font-size: 120%; text-align: center; text-decoration: none; border-radius: 10px;"
-    href="http://bit.ly/tpc-2017-dc-cfp">Submit here, via this Google Form<br>The deadline is March 6, 2017</a>
+    style="display: block; border: 1px solid black; background-color: red; padding: 1em;color: white; font-weight: bold; font-size: 120%; text-align: center; text-decoration: none; border-radius: 10px;"
+    href="http://bit.ly/tpc-2017-dc-cfp">CFP Closed! You can still submit if you want... but no promises :)<br>The deadline was March 6, 2017</a>
 
 [% FILTER markdown %]
 
