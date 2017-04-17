@@ -4,3 +4,6 @@ requires 'App::watcher';
 # for building templates, including Markdown support
 requires 'Template';
 requires 'Template::Plugin::Markdown';
+
+# Other stuff
+requires 'Text::CSV'
