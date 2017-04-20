@@ -1,0 +1,51 @@
+
+[% USE Markdown %]
+[% FILTER markdown %]
+
+# Schedule
+
+We are currently working on the full schedule. In the meantime, here is an outline! The pre/post tutorial sessions are separate paid events which you can select when you [register](register).
+
+### Sunday 6/18 - Pre-Conference Tutorials
+
+* Perl in a Day (John Anderson)
+* Introduction to Moose (Dave Rolsky)
+* Perl Second Best Practices ( Randal Scwartz ) - 1/2 day
+* Unicode and Associated Punishments (Ricardo Signes) - 1/2 day
+
+### Monday 6/19 - Conference Day 1
+
+* Registation, Intro, Announcements, Snacks
+* Talks -- 4 tracks
+* Lightning Talks!
+* Keynote
+* Evening activities -- VIP and Sponsors Dinner
+
+### Tuesday 6/20 - Conference Day 2
+
+* Intro, Announcements, Snacks
+* Talks -- 4 tracks
+* Lightning Talks!
+* Keynote
+* Evening activities -- General Event
+
+### Wednesday 6/21 - Conference Day 3
+
+* Intro, Announcements, Snacks
+* Talks -- 4 tracks
+* Lightning Talks!
+* Keynote
+
+### Thursday 6/22 - Post-Conference Tutorials 1
+
+* Advanced Parsing Techniques (Mark Dominus) - 1/2 day
+* Higher Order Perl (Mark Dominus) - 1/2 day
+* MongoDB with Perl (David Golden)
+* New Perl (Damian Conway)
+
+### Friday 6/23 - Post-Conference Tutorials 2
+
+* Parsing with Perl 6 Regexes and Grammars (Damian Conway)
+
+
+[%-END %]
