@@ -5,6 +5,8 @@
 
 # Talks & Tutorials
 
+Here are the full details of all of our confirmed talks (more awaiting confirmation)! We are working on putting these into tracks, and will post the schedule once we have a good draft.
+
 [% END %]
 
 [% PERL %]
@@ -17,15 +19,34 @@ while(my $row = $csv->getline_hr($talks_csv)) {
   push @$talks, $row;
 }
 
+$talks = [ sort { $a->{title} cmp $b->{title} } @$talks ];
+
 $stash->set(talks => $talks);
-$stash->set(name => 'Boo');
 
 [% END %]
 
 [% FOREACH talk IN talks %]
 <div class=talk>
+<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a> - [%= talk.name %]
+[% IF talk.twitter_username %]
+  <a href="http://twitter.com/[%= talk.twitter_username %]">
+    <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
+  </a>
+[% END %]
+[% IF talk.cpan_username %]
+  <a href="https://www.metacpan.org/author/[%= talk.cpan_username %]">
+    <img src="/tpc-2017-dc/img/metacpan-icon.png">
+  </a>
+[% END %]
+</div>
+[% END %]
+
+<hr>
+
+[% FOREACH talk IN talks %]
+<div class=talk id="[%= talk.title.lower.replace('\W+','_') %]">
 <h2>[%= talk.title %]</h2>
-<h3>[%= talk.your_name %]
+<h3>[%= talk.name %]
 [% IF talk.twitter_username %]
   <a href="http://twitter.com/[%= talk.twitter_username %]">
     <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
@@ -44,9 +65,11 @@ $stash->set(name => 'Boo');
 [%= talk.public_description %]
 [% END %]
 
+<blockquote><i>
 [% FILTER markdown %]
 [%= talk.brief_bio %]
 [% END %]
+</i></blockquote>
 
 </div>
 [% END %]

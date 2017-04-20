@@ -8,7 +8,7 @@ ttree \
   --wrapper=./src/tpc-2017-dc/head.tt \
   --relative \
   --suffix tt=html \
-  --copy '.(png|jpg|js)$'
+  --copy '.(png|jpg|js|csv)$'
 
 sass --update src/tpc-2017-dc/css/:docs/tpc-2017-dc/css
 
