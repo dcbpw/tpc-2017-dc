@@ -6,6 +6,7 @@
 $bgbase: #a4825a;
 $darker: darken($bgbase, 10%);
 $darkerer: darken($bgbase, 20%);
+$lighter: lighten($bgbase, 30%);
 
 body {
   background: $bgbase url(../img/bg-tiled-v2.jpg);
@@ -26,6 +27,7 @@ body {
   // margin: 20vmin;
   // margin: 2em 20vmin;
   // background-color: rgba(255,255,255,0.7);
+  // background-color: $lighter;
   background-color: white;
   border: 1px solid black;
   max-width: 1024px;
@@ -41,6 +43,9 @@ body {
   align-items: center;
   font-size: 90%;
   // font-size: 1.2vmin;
+  // background-color: $lighter;
+  // background-color: rgba(255,255,255,0.7);
+  // border-radius: 25px;
 
   .title {
   display: flex;
