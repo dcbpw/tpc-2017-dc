@@ -65,12 +65,18 @@ $stash->set(talks => $talks);
 [%= talk.public_description %]
 [% END %]
 
-<blockquote><i>
+<blockquote>
+[% IF talk.photo_url %]
+  <img src="[%= talk.photo_url %]" style="width: 107px; float:left; margin: 0 1em 1em 1em">
+[% END %]
+
+<i>
 [% FILTER markdown %]
 [%= talk.brief_bio %]
 [% END %]
 </i></blockquote>
 
 </div>
+<hr style="clear: both;">
 [% END %]
 
