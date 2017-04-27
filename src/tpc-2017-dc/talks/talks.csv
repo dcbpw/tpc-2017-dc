@@ -103,50 +103,59 @@ Strong coffee is advised as a prerequisite to attending this talk."
 Sawyer X,XSAWYERX,PerlSawyer,http://www.blogs.perl.org/users/sawyer_x,https://secure.gravatar.com/avatar/f2bdad6d5883044b9d3c88e50f957bfc?s=130&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Ff2bdad6d5883044b9d3c88e50f957bfc%3Fs%3D130%26d%3Didenticon,"A person incapable of providing a simple, clear Bio.",Standard Talk - 50 minutes,2,Any and All!,Pakket - An Unopinionated Meta-Packaging System,Packaging is one of the more illusive problems in maintaining a large set-up at any company. This is the solution we came up with at Booking.com.
 Raja Renga Bashyam,,rajawebstars,kg.webstarscg.com`,,"A Perl Artist, Web App Developer & Web Designer from Indian Sub-content.  More than a decade of friendship with Perl to solve challenges of various kinds in computing. Working on a comprehensive reporting frame work and regular expression based action system in Perl.",Standard Talk - 50 minutes,2,Any and All!,Kangiten PDF-Writer (PDF-Reuse + Reduce & Recycle) - a PDF Document Creator for Structured Content,"Kangiten will produce PDF documents based on PDF-Resuse module. It will reduce inline manual format instructions by a structured HoH bulk input. Kangiten produces the document in a two stage way.   Creation of structure first than filling the content. The two way method will help to reuse the structure in similar needs and recycle the structure to meet minor variation.
 
-During implementation of a billing solution for Advertising Agency, we have requirements to produce PDF documents with six different structures and the document structure shared by 3 different legal entities with minor variations. It has the usual Estimate – Purchase Order -> Invoice with Detail, Rate, Qty and Amount with varied additional columns for Print Media and A/V works. Mainly we looked for a PDF library with: 
-1.	Ability to tailor build the document
-2.	A module that gives production control in pixel level 
-3.	Flexible options to set page properties
-4.	Option to implement images/signatures
-5.	Position control to handle page continuation
+During implementation of a billing solution for Advertising Agency, we have requirements to produce PDF documents with six different structures and the document structure shared by 3 different legal entities with minor variations. It has the usual Estimate – Purchase Order -> Invoice with Detail, Rate, Qty and Amount with varied additional columns for Print Media and A/V works. Mainly we looked for a PDF library with:
+
+1.        Ability to tailor build the document
+2.        A module that gives production control in pixel level
+3.        Flexible options to set page properties
+4.        Option to implement images/signatures
+5.        Position control to handle page continuation
+
 After a lengthy search, we finally zeroed in PDF-Reuse module. It did not have user friendly function wraps for graphical output, but it offered a developer friendly core functions to control the graphical output in a pixel level. It helped to wrap our custom functions to handle in generic way.
 
 Map to Reuse, Reduce & Recycle
-One of PDF:: Reuse’s main advantage is that it can take an existing PDF - something that our designers can create with their standard PDF tools and then all we have to do is add the various content details to it. The feature of reusing the existing PDF and writing content over that, helped to reuse the existing legal entity letter pads in specific company document production.  It's avoided manual graphic production work. 
+
+One of PDF:: Reuse’s main advantage is that it can take an existing PDF - something that our designers can create with their standard PDF tools and then all we have to do is add the various content details to it. The feature of reusing the existing PDF and writing content over that, helped to reuse the existing legal entity letter pads in specific company document production.  It's avoided manual graphic production work.
 
 Instead of line by line manual instruction to write and format, we used a structured bulk input to create structure with format need and fill the content.  The PDF::Reuse core function mapped to input data.
+
 The document classified into three major parts:
-1.	The page layout and page background
-2.	Header
-3.	Content
+
+1.        The page layout and page background
+2.        Header
+3.        Content
+
 Each input will take the communication in HoH structure.
 
 A simple structure to produce one line seems like:
-# Data structure input for produce one liner output
-# base structure
-my $print_data = {
-    0 => {
-        left_xaxis  => 250,     # print start x position
-        line_height => 25,
-        # column definition
-        header => {
-            # define the first (and only) column
-            0 => {
-                font      => 'Helvetica-Bold',
-                font_size => 12,
+
+    # Data structure input for produce one liner output
+    # base structure
+    my $print_data = {
+        0 => {
+            left_xaxis  => 250,     # print start x position
+            line_height => 25,
+            # column definition
+            header => {
+                # define the first (and only) column
+                0 => {
+                    font      => 'Helvetica-Bold',
+                    font_size => 12,
+                },
             },
+            # insert the data
+            data => [['Production Estimate']],
         },
-        # insert the data
-        data => [['Production Estimate']],
-    },
- };
+     };
 
 The same structure can be reused to similar needs and adjusted to minor variations and duplicated to continuous need.  Based on the structure it will produce single row & multiple row contents.  It's continuously evolved to meet real time needs. Some of the features like  header continuation to new pages,  table header to new pages, auto compress the document size  added incrementally.
 
-Started from  billing solution, now it helps in many of our PDF document productions needs. Now it's available in public. 
+Started from  billing solution, now it helps in many of our PDF document productions needs. Now it's available in public.
+
 https://github.com/WebstarsCG/Kangiten-PDF-Writer
 
 In this talk, I will share the tools inner components,  existing use cases and a short hands-on implementation on structured way of document generation to achieve Reuse Structure, Reduce Code & Development Time  & Recycle the structures to meet variations.
+
 
 "
 Graham Knop,haarg,haarg,,https://secure.gravatar.com/avatar/5037faf9ba40cf736778820fe83fc2ae?s=130&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F5037faf9ba40cf736778820fe83fc2ae%3Fs%3D130%26d%3Didenticon,"Moo, toolchain, and deep ugly magic.",Standard Talk - 50 minutes,2,Intermediate (3-5 years),Continuous Integration for CPAN,"Continuous integration helps you catch issues in your modules across a more diverse set of configurations than is easy to check manually.  Travis-CI and AppVeyor are free CI solutions for open source projects that will allow automatic testing on Linux, macOS, and Windows.  Extra tools exist for easy testing with more configurations than Travis-CI has built in support for."

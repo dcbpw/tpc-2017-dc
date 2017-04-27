@@ -1,0 +1,118 @@
+Name,CPAN_Username,Twitter_Username,Website,Photo_URL,Brief_Bio,Presentation_Type,Audience_Experience,Title,Price,Minimum,Public_Description
+John S Jacobs Anderson,genehack,genehack,genehack.org,https://secure.gravatar.com/avatar/025d30f04795e1efc142701e4ac89bfd?s=130&d=identicon,"John is the VP of Technology for Infinity Interactive, a virtual IT consultancy. When he's not maintaining Perl modules or tweaking his Emacs config, he likes to play around with new languages like Swift and write about himself in the third person.",Full Day Tutorial,2,Beginner,Perl in a Day,$50 USD,1,"When learning a new language, some folks prefer to read the language documentation, or work through simple exercises like you might find on http://exercism.io -- but I prefer to have something more like an actual project. I find that holds my focus a little better, and that I do a better job of absorbing the new language syntax and features if I'm using them for something *real*.
+
+This 1 day tutorial will introduce you to the features of the Perl language while walking you through writing a static site generator. We'll start simply by opening, reading, and writing files, but over the course of the day we'll cover processing directories full of files, selecting and using a templating system, supporting Markdown, implementing a simple weblog, and much more.
+
+This tutorial is aimed at people who have some programming experience in another language. No Perl experience will be required or assumed."
+
+Dave Rolsky,DROLSKY,,http://blog.urth.org/,https://secure.gravatar.com/avatar/ac0051ccbf2115f581f5da62fb56c219?s=130&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F1401e7f176d9e13ad2a9380ecd1f18f6%3Fs%3D130%26d%3Didenticon,"Dave Rolsky has been a Perl developer since 1999, and has created or contributed to dozens of CPAN modules, including DateTime, Log::Dispatch, Params::Validate, and more. He is also a member of the Moose core development team, and in early 2009 completed a TPF grant to substantially rewrite and expand the Moose documentation. Way back when, he co-wrote Embedding Perl in HTML with Mason and RT Essentials, both published by O'Reilly", Full Day Tutorial, "This class is aimed at Perl programmers who understand object-oriented programming and want to learn how to do it with Moose. It is not suitable for Perl beginners or for people without any OO experience. OO experience in other languages besides Perl is sufficient, as long as you also have a good grasp of Perl syntax, particularly method call syntax.", "Introduction to Moose", $150 USD,4,"This is an interactive hands-on course all about Moose, an OO system for Perl 5 that provides a simple declarative layer of “sugar” on top of a powerful, extensible meta-model.
+
+With Moose, simple classes can be created without writing any subroutines, and complex classes can be simplified. Moose’s features include a powerful attribute declaration system, type constraints and coercions, method modifiers (“before”, “after”, and “around”), a role system (like mixins on steroids), and more. Moose also has a vibrant ecosystem of extensions as seen in the variety of MooseX:: modules on CPAN.
+
+This course covers Moose’s core features, goes in depth on many of them, and explores some of the more powerful MooseX:: modules available on CPAN.
+
+This is a hands-on course. Each lecture section is followed by a hands-on exercise section where you put what you’ve just learned into practice. The instructor will work with each student individually as needed to help you get the most from these exercises.
+
+This class is aimed at Perl programmers who understand object-oriented programming and want to learn how to do it with Moose. It is not suitable for Perl beginners or for people without any OO experience. OO experience in other languages besides Perl is sufficient, as long as you also have a good grasp of Perl syntax, particularly method call syntax.
+
+Students are expected to bring a laptop with a recent version of Perl and the editor of their choice. You will also be expected to clone the class’s git repository in order to obtain a copy of the class slides and exercises.
+
+More information about the course is available here: http://www.houseabsolute.com/classes/" 
+
+Randal L. Schwartz, MERLYN, @merlyn, http://www.stonehenge.com/merlyn/, , ,Half Day Tutorial, ,Perl Second Best Practices, $125 USD,1,"So, you don't have time to read Damian Conway's "Perl Best Practices" book, to understand his "256 guidelines on the art of coding to help you write better Perl code"? Hear Randal Schwartz provide the executive summary, including pointing out where Randal disagrees with Damian, and why. This high-speed overview will help you understand "code layout, naming conventions, choice of data and control structures, program decomposition, interface design and implementation, modularity, object orientation, error handling, testing, and debugging." But using shorter words."
+
+Signes placeholder
+Ricardo Signes, rjbs, , http://rjbs.manxome.org, , ,Half Day Tutorial, , "Unicode and Associated Punishments", $100 USD, 5, "Encoding is the worstÃ¢Â€Â¼
+
+At first it seems simple â€” you just add "_utf8" to some methods, and things work. Later, you realize that there's a "UTF8 flag" that governs whether things will work. Everything gets better! &#x1F603;
+
+Except then people start telling you that you're an idiot, and that this flag isn't anything to do with Unicode. (They don't listen when you remind them about its name!)
+
+Why is encoding so stupid? Why is perl so stupid? Why is everyone involved so stupid? Who might exist, stupid enough to try to communicate the answers to these questions?
+
+I'm here to help."
+
+Mark Jason Dominus, mjd, ,http://perl.plover.com/, , Half Day Tutorial, , Advanced Parsing Techniques for Perl, $75, 1, "Parsing is the task of analyzing unstructured inputs, such as character strings, and transforming them into structured data, such as databases or hierarchies. Nearly every program has to parse input. Perl provides some built-in operators for parsing, but they go only so far. And although CPAN contains several excellent parsing modules, most are fundamentally limited.
+
+In this class, we will see how to build a parsing system that is unlimited in extent. The basic idea is to construct modular tools that can assemble simple parsers into more complex ones. When complex parsers are built from simple components, parsing code is powerful, flexible, and maintainable. Parsers are written directly in Perl, not in a separate language. Some tools are generic, and are useful in building nearly any parser, but we'll also see how to build special-purpose parser-constructing tools as we need them to solve parsing problems that are specific to an application. Topics will include:
+
+*  Building lexers and emulating Perl's '<FH>' operator
+*  Very simple parsers
+*  Writing functions to combining simple parsers into more complex ones
+*  Recursive descent
+*  Case study: parsing regular expressions
+*  Case study: parsing outlines and trees
+*  Parsers that diagnose and recover from erroneous input
+*  Backtracking
+*  Operator overloading"
+
+Mark Jason Dominus, mjd, ,http://perl.plover.com/, , Half Day Tutorial, ,Higher-Order Perl, $75, 1,"It's well-known that Perl resembles
+languages used in the Unix sysadmin community, such as C, Bourne shell, awk, and sed. Perl programmers tend to come from
+that community, or to have been trained by people who did.
+
+Perhaps you've heard the joke that a dedicated Fortran programmer can write Fortran programs in any language. But Perl programmers have been writing C programs in Perl for years without realizing it. This class will show you how to effectively use some of Perl's most powerful features to do
+organize your programs more powerfully and effectively.
+
+I've raided the techniques of the Lisp and functional programming communities and come back with all the loot I can carry, techniques for increasing modularity and interoperability on large projects.
+
+We'll take recursion to the next level and see how to build powerful recursive functions for managing hierarchical data. We'll see how callbacks, usually relegated to GUI programming, can be used to increase modularity in your library functions, so that they can be used in ways you didn't expect, by programmers years later, without anyone having to change or even look at your code. We'll look in detail at how to provide 'function factories' that manufacture, on demand, the library functions that the user needs. We'll see how objects based on anonymous functions can be used to get around some of the limitations of Perl's built in OOP system. We'll see how to make your own filehandle-like objects that generate data on demand."
+ 
+David Golden,dagolden,xdg,http://www.dagolden.com/,https://secure.gravatar.com/avatar/bb755c989fcb9897f28a2c6e00df61e2?s=130&d=identicon,"David Golden wears many hats in the Perl community. In his day job, he works at MongoDB, where he maintains the MongoDB Perl and C++ drivers.", Full Day Tutorial, Intermediate, "MongoDB with Perl", $99 USD, 1, "MongoDB is the #1 database that developers want to learn this year, according to the 2017 Stack Overflow developer survey. This full-day workshop mixes lecture and hands-on exercises to teach you how to use MongoDB with Perl, led by the author of the MongoDB Perl driver. We'll cover when to use MongoDB (and when not to!) and you'll leave the workshop knowing CRUD operations, indexing, aggregation pipelines, effective schema design, and more. Strong-beginner or better Perl skills recommended. "
+
+Damian Conway,DCONWAY,,http://damian.conway.org,,"Damian Conway is a 52-year-old Australian male, wanted in connection with various outrages and atrocities committed on CPAN over the past two decades, as well as numerous assaults on the sanity of Perl audiences across four continents.",Full Day Tutorial, all, New Perl, $150 USD, 1, "Perl 5.10 added more useful features to the language than any other release since Perl 5.0.0. Perls 5.12 through 5.24 are more recent annual releases that provide important refinements and further enhancements. Perl 5.26 is the next scheduled release, due in mid-2017. Most people are now using Perl 5.10 or later, but often without taking advantage of those new features.
+
+This one-day tutorial provides a detailed introduction to the new and improved features of these modern versions of Perl 5, along with practical examples of how they can improve the performance, robustness, and maintainability of your code.
+
+Topics covered include:
+
+Backward and forward compatibility using the feature pragma
+Smartmatching comparisons
+Perl's new switch statement
+Many new features and performance improvements for regular expression
+State variables
+Lexical subroutines
+Handling defaults with the defined-or operator
+New and improved file and filetest operations
+Recursive sorting and pattern matching
+The new UNITCHECK execution phase
+The extended package definition syntax
+Implicit strictures
+Using each on arrays
+Using array or hash references in place of arrays or hashes
+Much more reliable exception handling
+New and improved core modules and pragmas
+New documentation
+Deprecations and feature removals
+Where to expect better (or worse!) performance
+"
+Damian Conway,DCONWAY,,http://damian.conway.org,,"Damian Conway is a 52-year-old Australian male, wanted in connection with various outrages and atrocities committed on CPAN over the past two decades, as well as numerous assaults on the sanity of Perl audiences across four continents.", Full Day Tutorial, , Parsing with Perl 6 Regexes and Grammars, $150 USD, 1, "Parsing is the process of detecting and verifying the structure of incoming data and then processing that data so as to make it available to a program in convenient ways.
+
+This full-day tutorial will introduce beginner and intermediate
+programmers to the powerful and efficient parsing mechanisms built
+into Perl 6, and will explore specific techniques for parsing data
+in a variety of commonly used real-world formats.
+
+Topics covered include:
+
+* simple parsing with Perl 6 regexes
+
+* structured parsing with Perl 6 grammars
+
+* dealing with XML and other tagged formats
+
+* decoding heterogeneous structured formats
+
+* extracting data structures from structured data
+
+* coping with incomplete, malformed, and ambiguous data
+
+* integrating parsing and object oriented programming
+
+
+Course format
+
+    1-day seminar
+
+Who should attend
+
+Programmers who are familiar with simple regular expressions (either from their editor or from a programming language). The techniques presented are not restricted to the particular applications mentioned, and will be useful to anyone who needs to process or transform structured text-based data of any kind."

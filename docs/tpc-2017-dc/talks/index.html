@@ -1725,51 +1725,61 @@ William has invented technology for open source license management (U.S. Pat. 8,
 
 <p>Kangiten will produce PDF documents based on PDF-Resuse module. It will reduce inline manual format instructions by a structured HoH bulk input. Kangiten produces the document in a two stage way.   Creation of structure first than filling the content. The two way method will help to reuse the structure in similar needs and recycle the structure to meet minor variation.</p>
 
-<p>During implementation of a billing solution for Advertising Agency, we have requirements to produce PDF documents with six different structures and the document structure shared by 3 different legal entities with minor variations. It has the usual Estimate – Purchase Order -> Invoice with Detail, Rate, Qty and Amount with varied additional columns for Print Media and A/V works. Mainly we looked for a PDF library with: 
-1.  Ability to tailor build the document
-2.  A module that gives production control in pixel level 
-3.  Flexible options to set page properties
-4.  Option to implement images/signatures
-5.  Position control to handle page continuation
-After a lengthy search, we finally zeroed in PDF-Reuse module. It did not have user friendly function wraps for graphical output, but it offered a developer friendly core functions to control the graphical output in a pixel level. It helped to wrap our custom functions to handle in generic way.</p>
+<p>During implementation of a billing solution for Advertising Agency, we have requirements to produce PDF documents with six different structures and the document structure shared by 3 different legal entities with minor variations. It has the usual Estimate – Purchase Order -> Invoice with Detail, Rate, Qty and Amount with varied additional columns for Print Media and A/V works. Mainly we looked for a PDF library with:</p>
 
-<p>Map to Reuse, Reduce &amp; Recycle
-One of PDF:: Reuse’s main advantage is that it can take an existing PDF - something that our designers can create with their standard PDF tools and then all we have to do is add the various content details to it. The feature of reusing the existing PDF and writing content over that, helped to reuse the existing legal entity letter pads in specific company document production.  It's avoided manual graphic production work. </p>
+<ol>
+<li>Ability to tailor build the document</li>
+<li>A module that gives production control in pixel level</li>
+<li>Flexible options to set page properties</li>
+<li>Option to implement images/signatures</li>
+<li>Position control to handle page continuation</li>
+</ol>
 
-<p>Instead of line by line manual instruction to write and format, we used a structured bulk input to create structure with format need and fill the content.  The PDF::Reuse core function mapped to input data.
-The document classified into three major parts:
-1.  The page layout and page background
-2.  Header
-3.  Content
-Each input will take the communication in HoH structure.</p>
+<p>After a lengthy search, we finally zeroed in PDF-Reuse module. It did not have user friendly function wraps for graphical output, but it offered a developer friendly core functions to control the graphical output in a pixel level. It helped to wrap our custom functions to handle in generic way.</p>
+
+<p>Map to Reuse, Reduce &amp; Recycle</p>
+
+<p>One of PDF:: Reuse’s main advantage is that it can take an existing PDF - something that our designers can create with their standard PDF tools and then all we have to do is add the various content details to it. The feature of reusing the existing PDF and writing content over that, helped to reuse the existing legal entity letter pads in specific company document production.  It's avoided manual graphic production work.</p>
+
+<p>Instead of line by line manual instruction to write and format, we used a structured bulk input to create structure with format need and fill the content.  The PDF::Reuse core function mapped to input data.</p>
+
+<p>The document classified into three major parts:</p>
+
+<ol>
+<li>The page layout and page background</li>
+<li>Header</li>
+<li>Content</li>
+</ol>
+
+<p>Each input will take the communication in HoH structure.</p>
 
 <p>A simple structure to produce one line seems like:</p>
 
-<h1>Data structure input for produce one liner output</h1>
-
-<h1>base structure</h1>
-
-<p>my $print_data = {
-    0 => {
-        left_xaxis  => 250,     # print start x position
-        line_height => 25,
+<pre><code># Data structure input for produce one liner output
+# base structure
+my $print_data = {
+    0 =&gt; {
+        left_xaxis  =&gt; 250,     # print start x position
+        line_height =&gt; 25,
         # column definition
-        header => {
+        header =&gt; {
             # define the first (and only) column
-            0 => {
-                font      => 'Helvetica-Bold',
-                font_size => 12,
+            0 =&gt; {
+                font      =&gt; 'Helvetica-Bold',
+                font_size =&gt; 12,
             },
         },
         # insert the data
-        data => [['Production Estimate']],
+        data =&gt; [['Production Estimate']],
     },
- };</p>
+ };
+</code></pre>
 
 <p>The same structure can be reused to similar needs and adjusted to minor variations and duplicated to continuous need.  Based on the structure it will produce single row &amp; multiple row contents.  It's continuously evolved to meet real time needs. Some of the features like  header continuation to new pages,  table header to new pages, auto compress the document size  added incrementally.</p>
 
-<p>Started from  billing solution, now it helps in many of our PDF document productions needs. Now it's available in public. 
-https://github.com/WebstarsCG/Kangiten-PDF-Writer</p>
+<p>Started from  billing solution, now it helps in many of our PDF document productions needs. Now it's available in public.</p>
+
+<p>https://github.com/WebstarsCG/Kangiten-PDF-Writer</p>
 
 <p>In this talk, I will share the tools inner components,  existing use cases and a short hands-on implementation on structured way of document generation to achieve Reuse Structure, Reduce Code &amp; Development Time  &amp; Recycle the structures to meet variations.</p>
 
