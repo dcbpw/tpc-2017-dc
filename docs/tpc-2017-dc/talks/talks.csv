@@ -101,6 +101,54 @@ choice.
 
 Strong coffee is advised as a prerequisite to attending this talk."
 Sawyer X,XSAWYERX,PerlSawyer,http://www.blogs.perl.org/users/sawyer_x,https://secure.gravatar.com/avatar/f2bdad6d5883044b9d3c88e50f957bfc?s=130&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Ff2bdad6d5883044b9d3c88e50f957bfc%3Fs%3D130%26d%3Didenticon,"A person incapable of providing a simple, clear Bio.",Standard Talk - 50 minutes,2,Any and All!,Pakket - An Unopinionated Meta-Packaging System,Packaging is one of the more illusive problems in maintaining a large set-up at any company. This is the solution we came up with at Booking.com.
+Raja Renga Bashyam,,rajawebstars,kg.webstarscg.com`,,"A Perl Artist, Web App Developer & Web Designer from Indian Sub-content.  More than a decade of friendship with Perl to solve challenges of various kinds in computing. Working on a comprehensive reporting frame work and regular expression based action system in Perl.",Standard Talk - 50 minutes,2,Any and All!,Kangiten PDF-Writer (PDF-Reuse + Reduce & Recycle) - a PDF Document Creator for Structured Content,"Kangiten will produce PDF documents based on PDF-Resuse module. It will reduce inline manual format instructions by a structured HoH bulk input. Kangiten produces the document in a two stage way.   Creation of structure first than filling the content. The two way method will help to reuse the structure in similar needs and recycle the structure to meet minor variation.
+
+During implementation of a billing solution for Advertising Agency, we have requirements to produce PDF documents with six different structures and the document structure shared by 3 different legal entities with minor variations. It has the usual Estimate – Purchase Order -> Invoice with Detail, Rate, Qty and Amount with varied additional columns for Print Media and A/V works. Mainly we looked for a PDF library with: 
+1.	Ability to tailor build the document
+2.	A module that gives production control in pixel level 
+3.	Flexible options to set page properties
+4.	Option to implement images/signatures
+5.	Position control to handle page continuation
+After a lengthy search, we finally zeroed in PDF-Reuse module. It did not have user friendly function wraps for graphical output, but it offered a developer friendly core functions to control the graphical output in a pixel level. It helped to wrap our custom functions to handle in generic way.
+
+Map to Reuse, Reduce & Recycle
+One of PDF:: Reuse’s main advantage is that it can take an existing PDF - something that our designers can create with their standard PDF tools and then all we have to do is add the various content details to it. The feature of reusing the existing PDF and writing content over that, helped to reuse the existing legal entity letter pads in specific company document production.  It's avoided manual graphic production work. 
+
+Instead of line by line manual instruction to write and format, we used a structured bulk input to create structure with format need and fill the content.  The PDF::Reuse core function mapped to input data.
+The document classified into three major parts:
+1.	The page layout and page background
+2.	Header
+3.	Content
+Each input will take the communication in HoH structure.
+
+A simple structure to produce one line seems like:
+# Data structure input for produce one liner output
+# base structure
+my $print_data = {
+    0 => {
+        left_xaxis  => 250,     # print start x position
+        line_height => 25,
+        # column definition
+        header => {
+            # define the first (and only) column
+            0 => {
+                font      => 'Helvetica-Bold',
+                font_size => 12,
+            },
+        },
+        # insert the data
+        data => [['Production Estimate']],
+    },
+ };
+
+The same structure can be reused to similar needs and adjusted to minor variations and duplicated to continuous need.  Based on the structure it will produce single row & multiple row contents.  It's continuously evolved to meet real time needs. Some of the features like  header continuation to new pages,  table header to new pages, auto compress the document size  added incrementally.
+
+Started from  billing solution, now it helps in many of our PDF document productions needs. Now it's available in public. 
+https://github.com/WebstarsCG/Kangiten-PDF-Writer
+
+In this talk, I will share the tools inner components,  existing use cases and a short hands-on implementation on structured way of document generation to achieve Reuse Structure, Reduce Code & Development Time  & Recycle the structures to meet variations.
+
+"
 Graham Knop,haarg,haarg,,https://secure.gravatar.com/avatar/5037faf9ba40cf736778820fe83fc2ae?s=130&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F5037faf9ba40cf736778820fe83fc2ae%3Fs%3D130%26d%3Didenticon,"Moo, toolchain, and deep ugly magic.",Standard Talk - 50 minutes,2,Intermediate (3-5 years),Continuous Integration for CPAN,"Continuous integration helps you catch issues in your modules across a more diverse set of configurations than is easy to check manually.  Travis-CI and AppVeyor are free CI solutions for open source projects that will allow automatic testing on Linux, macOS, and Windows.  Extra tools exist for easy testing with more configurations than Travis-CI has built in support for."
 Joe Kline,gizmo,gizmomathboy,purdue.pl,,Sysadmin at Purdue University and member of Purdue Perl Mongers and Hack Lafayette.,Short Talk - 20 minutes,1,Any and All!,To Serve Human,"The code we write changes peoples lives, but we often don't think about our impact as IT professionals. The revolution in job automation is a current example of technological impact on society.
 
@@ -168,6 +216,7 @@ He spends a lot of his free time on animal advocacy, and otherwise vegetates wit
 ",Standard Talk - 50 minutes,2,Any and All!,Make Your Technical Hiring Process Suck at Least 20% Less,"As someone who's both done a lot of hiring and been through many interviews, I can tell you with great certainty that it's almost uniformly terrible. I have some ideas on how you can make your hiring process less terrible, both for the candidates and for yourself.
 
 Some topics I'll cover are how most processes suck, how to write a good job description, pre-interview screening approaches, how not to be a complete jerk when you interview someone, questions to ask (and question to not ask), and more."
+Ruben Amortegui,AMORTEGUI,ramortegui,www.rubenamortegui.com,https://s.gravatar.com/avatar/91c819274031d8dad62811e5d966ca3c?s=80,Software developer. Using Perl for e-commerce since 2013.,Short Talk - 20 minutes,1,Beginner (0-2 years),Webstores with Dancer2::Plugin::Cart,Dancer2::Plugin::Cart a lightweight and extensible module to manage carts and the checkout on webstores.
 Chris Prather,perigrin,perigrin,http://perigr.in,https://secure.gravatar.com/avatar/72ca0434d6998fb97198f278926c6abf?s=130&d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fd3103c7c7366bf63e22299fd36a7ec2c%3Fs%3D130%26d%3Didenticon,Pretty Pretty Perl Princess Pony,Short Talk - 20 minutes,1,Any and All!,MAKE new Friends,"I spend a lot of time working from my car. It's a lot of fun but sometimes it can be very lonely. The Raspberry Pi 3 is an amazing piece of kit, and with the help of some friends you can do very interesting things with it. Like build yourself an personal digital assistant for your car."
 James E Keenan,JKEENAN,,http://thenceforward.net/perl,,"New York City-based Perl programmer and community organizer.  Author of more than a dozen CPAN libraries.  Presenter at YAPC::NA, YAPC::EU, YAPC::CA, DC-Baltimore Perl Workshop, Pittsburgh Perl Workshop and local Perlmonger meetings in New York, Toronto, Philadelphia and New Orleans.  Member of Perl 5 Porters.",Short Talk - 20 minutes,1,Any and All!,How Do We Assess and Maintain the Health of the Perl 5 Codebase?,"The publicly visible part of the Perl 5 codebase consists of the Perl 5 core distribution and the totality of all the libraries on CPAN.  We assess the health of the codebase via testing:  smoke-testing of Perl 5 blead and CPANtesters testing of new CPAN releases on a wide variety of versions of Perl and of operating systems.
 
@@ -176,8 +225,9 @@ But what happens when the code is not so healthy or when we need to provide prev
 In this presentation we'll discuss the current state of Perl 5 smoke testing, testing of CPAN libraries and the mysterious land between them known as ""Blead Breaks CPAN.""  We'll see some of the challenges which the Perl 5 Porters face in moving the core language forward without causing major problems for CPAN libraries and other users.  And we'll introduce some ideas for improvements in the ways we maintain the health of the ecosystem."
 Joel Berger,JBERGER,joelaberger,,https://secure.gravatar.com/avatar/28d0d015d88863cd15e9fd69e0885fc0?s=130&d=identicon,"Perl programmer and physicist, Mojolicious core team member.",Short Talk - 20 minutes,1,Any and All!,"Vue.js, Mojolicious, and Postgres chat in less than 50 lines","Demonstrating key features of these technologies, this talk will show how to build a front-end rendered, websocket delivered, broker-backed (prefork-safe) chat application in an easy-to-read 50 line file single-file application. "
 bulk88,bulkdd,,,,"Bulk88 has been working with Perl for 14 years.  He is a frequent contributor to Perl 5 Porters, with a particular interest in optimization and Win32 support.  While he loves Perl, he's also happy being close to bare metal, including both ARM and x86 assembly programming. ",Standard Talk - 50 minutes,2,Advanced (5+ years),Writing XS in Plain C,"Even if you learned C in a classroom at some point, Perl's ""XS"" API for writing perl subs in something purported to be C but is really a cat on a tablet with caps lock on. In this talk I will show how difficult it is to write subs in plain C. This talk will make XS seem like a cakewalk.  "
-David Mertens,dcmertens,,,,"I am an Assistant Professor of Physics at Eckerd College in St. Petersburg, Florida. I have used Perl for scientific computing for a decade, prodding PDL and Prima in the process, and writing a number of scientifically-oriented distributions available on CPAN. I earned my Ph.D. in Physics from the University of Illinois at Urbana-Champaign. ",Short Talk - 20 minutes,1,Any and All!,Writing Useful Scientific Analysis Software,"Most scientists write bad software. This software can sometimes be improved with programming best practices. However, programming best practices do not help with data analysis software, the code that transforms the raw experimental data into digestible results, tables, and figures. Often, the most important results are not immediately obvious, only emerging after a period of exploratory analysis. This highly dynamic process involves pruning and sharpening, abandoning and starting fresh, and returning to a previously abandoned approach. Multiple lines of analysis from one stage serve as the starting point of the next. Test suites are a premature optimization, yet bugs sneak in and are discovered only in later stages. Over the last few years I have developed a modulino-based approach for managing this unusual set of challenges and constraints. In this talk, I will show the many inefficient approaches scientists use, how conventional software practices don't help, and how Perl's quirks make it easy to solve this problem with just a little bit of creativity and discipline."
+Nicolas R.,atoomic,atoomic,,https://secure.gravatar.com/avatar/7df78e735b7ef916d691e0b574a14f06?s=130&d=identicon,perl lover & hacker,Short Talk - 20 minutes,1,Any and All!,Introduction to Perl Internals,Internals for du'me
 Curt Tilmes,ctilmes@cpan.org,ctilmes,https://curt.tilmes.org,https://pbs.twimg.com/profile_images/2170274190/curtebiquity_400x400.png,NASA Computer Scientist building satellite data processing systems with Perl.,Standard Talk - 50 minutes,2,Intermediate (3-5 years),GraphQL and Perl 6,"Introducing a new GraphQL implementation for Perl 6.  GraphQL (graphql.org) was recently released by Facebook with an open source reference implementation in Javascript and a public specification, and has been widely ported since then.  This Perl 6 implementation capitalizes on some features of Perl 6, including grammars, introspection, concurrency, traits, etc. that make Perl 6 ideal for GraphQL, and make Perl 6 GraphQL great for implementing a web API for your data, regardless of your existing database technology.  This talk will introduce GraphQL briefly, and describe how to build a GraphQL schema and server in Perl 6."
+Jason Hall,JAYCE,JayceHall,,https://secure.gravatar.com/avatar/b2e642decab0f9b360a550c224955db5?s=130&d=identicon,"Longtime perl developer, focusing on payments systems.",Short Talk - 20 minutes,1,Any and All!,Getting started with Docker and Modern Perl,"Docker has made it's way into becoming a standard tool in a modern development cycle. Learn how to use it as part of your modern perl environment for new projects, or for better testing of your existing code."
 Doug Bell,PREACTION,preaction,http://preaction.me,https://secure.gravatar.com/avatar/4bdc4922059d58a0fcbf8f35652dc254.png,"Doug is the author of Beam::Wire, maintainer of CPAN Testers, and a zealous advocate for well-designed, object-oriented systems. Doug is using the Beam framework to improve and organize the CPAN Testers data processing system.",Short Talk - 20 minutes,1,Any and All!,Data Workflows with Beam::Wire,"The biggest problem in a large data processing system is how to organize it: Where are the scripts? Where's the configuration? How can the scripts share code and configuration? How do we turn our ad-hoc data processing scripts into a cohesive data platform?
 
 The Beam framework consists of tools for integrating systems, no matter what Perl libraries you're using. Beam::Wire provides a powerful configuration file for sharing information. Beam::Runner provides organization and discovery for data scripts. And Beam::Minion provides a scalable compute cluster using the Minion task engine. With these tools, you can build a flexible, maintainable data processing system, or start better organizing your existing data processing system."
