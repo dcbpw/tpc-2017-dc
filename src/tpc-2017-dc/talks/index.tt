@@ -46,6 +46,8 @@ $stash->set(talks => $talks);
 [% FOREACH talk IN talks %]
 <div class=talk id="[%= talk.title.lower.replace('\W+','_') %]">
 <h2>[%= talk.title %]</h2>
+[%= talk.presentation_type %], [%= talk.audience_experience %]
+
 <h3>[%= talk.name %]
 [% IF talk.twitter_username %]
   <a href="http://twitter.com/[%= talk.twitter_username %]">

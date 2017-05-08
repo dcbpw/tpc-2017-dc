@@ -17,7 +17,7 @@ On Debian, with Perlbrew and [App::cpanminus][cpanm] installed, you can run
 the following commands to install the dependencies:
 
     sudo apt-get install ruby-sass
-    cpanm -qn Template Template::Plugin::Markdown
+    cpanm -qn Template Template::Plugin::Markdown Text::CSV
 
 We're assuming you're using [Perlbrew][pb], which makes it so you can install
 CPAN modules in your own home directory. If you don't have that (or
