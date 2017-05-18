@@ -209,7 +209,7 @@ Dave Rolsky,DROLSKY,,http://blog.urth.org/,https://secure.gravatar.com/avatar/ac
 He spends a lot of his free time on animal advocacy, and otherwise vegetates with video games, books, and TV shows, like any proper nerd.
 ",Standard Talk - 50 minutes,2,2017-06-20,14:00,T4,Any and All!,Make Your Technical Hiring Process Suck at Least 20% Less,"As someone who's both done a lot of hiring and been through many interviews, I can tell you with great certainty that it's almost uniformly terrible. I have some ideas on how you can make your hiring process less terrible, both for the candidates and for yourself.
 
-Some topics I'll cover are how most processes suck, how to write a good job description, pre-interview screening approaches, how not to be a complete jerk when you interview someone, questions to ask (and question to not ask), and more."
+Some topics I'll cover are how most processes suck, how to write a good job description, pre-interview screening approaches, how not to be a complete jerk when you interview someone, questions to ask (and questions to not ask), and more."
 Abigail,Abigail,__Abigail__,,,20+ year of Perl programming. 18 year YAPC::NA veteran. Perl release manager. CPAN author. Regexp master.,Standard Talk - 50 minutes,2,2017-06-21,10:00,T1,Any and All!,Regexp Mini-Tutorial: Character Classes,"Character classes form their own mini-language inside the regular
 expressions (which are a mini-language inside Perl). In recent
 versions of Perl, an algebra was added to this language.
