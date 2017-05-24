@@ -10,7 +10,7 @@ We are currently working on the full schedule. In the meantime, here is an outli
 
 * <a href="/tpc-2017-dc/talks/#perl_in_a_day">Perl in a Day</a> (John Anderson), $50
 * <a href="/tpc-2017-dc/talks/#introduction_to_moose">Introduction to Moose</a> (Dave Rolsky), $150
-* <a href="/tpc-2017-dc/talks/perl_second_best_practices">Perl Second Best Practices</a> ( Randal Schwartz ) - 1/2 day, $125
+* <a href="/tpc-2017-dc/talks/#perl_second_best_practices">Perl Second Best Practices</a> ( Randal Schwartz ) - 1/2 day, $125
 * <a href="/tpc-2017-dc/talks/#unicode_and_associated_punishments">Unicode and Associated Punishments</a> (Ricardo Signes) - 1/2 day, $100
 
 ### Monday 6/19 - Conference Day 1 USPTO
@@ -45,7 +45,7 @@ We are currently working on the full schedule. In the meantime, here is an outli
 
 ### Friday 6/23 - Post-Conference Tutorials 2 USPTO
 
-* <a href="/talks/#parsing_with_perl_6_regexes_and_grammars">Parsing with Perl 6 Regexes and Grammars</a> (Damian Conway), $150
+* <a href="/tpc-2017-dc/talks/#parsing_with_perl_6_regexes_and_grammars">Parsing with Perl 6 Regexes and Grammars</a> (Damian Conway), $150
 
 
 [%-END %]
