@@ -1,0 +1,103 @@
+
+[% USE Markdown %]
+
+[% FILTER markdown %]
+
+# Schedule
+
+Here are the full details of all of our confirmed talks (more awaiting confirmation)! We are working on putting these into tracks, and will post the schedule once we have a good draft.
+
+[% END %]
+
+[% PERL %]
+use Text::CSV;
+my $csv = Text::CSV->new({binary => 1});
+open my $talks_csv, "<", "src/tpc-2017-dc/talks/talks.csv" or die "Err: $!";
+$csv->header($talks_csv);
+my $talks = [];
+my $schedule = {};
+while(my $row = $csv->getline_hr($talks_csv)) {
+  push @$talks, $row;
+  $schedule->{ $row->{day} }{ $row->{time} }{ $row->{track} } = $row;
+}
+
+$talks = [ sort { $a->{title} cmp $b->{title} } @$talks ];
+
+$stash->set(talks => $talks);
+$stash->set(schedule => $schedule);
+
+[% END %]
+[% USE Dumper %]
+
+<div class="schedule-flat">
+  [% FOREACH day IN schedule.keys.sort %]
+    Day: [%= day %]
+    <div>
+      <div class="table-row">
+        <div class=time>Time</div>
+        <div class=text>T1</div>
+        <div class=text>T2</div>
+        <div class=text>T3</div>
+        <div class=text>T4</div>
+      </div>
+      [% FOREACH time IN schedule.$day.keys.sort %]
+        <div class="table-row">
+          <div class="time">[%= time %]</div>
+          [% FOREACH track IN ['T1', 'T2', 'T3', 'T4'] %]
+            <div class="text [%= track %]">
+              [% SET talk = schedule.$day.$time.$track %]
+              [%= talk.title %]<br>
+              <i>[%= talk.name %]</i>
+            </div>
+          [% END %]
+        </div>
+      [% END %]
+    </div>
+  [% END %]
+</div>
+
+<div class="schedule-table">
+  <!-- FOREACH day IN schedule.keys.sort -->
+  [% FOREACH day IN ['2017-06-19', '2017-06-20', '2017-06-21'] %]
+    Day: [%= day %]
+    <table cellpadding=3px cellspacing=0>
+      <thead>
+        <th>Time</th>
+        <th>T1</th>
+        <th>T2</th>
+        <th>T3</th>
+        <th>T4</th>
+      </thead>
+      [% FOREACH time IN [
+      "09:30",
+      "10:00",
+      "10:30",
+      "11:00",
+      "11:30",
+      "12:00",
+      "12:30",
+      "13:00",
+      "13:30",
+      "14:00",
+      "14:30",
+      "15:00",
+      "15:30",
+      "16:00",
+      "16:30"] %]
+        <tr>
+          <th>[%= time %]</th>
+          [% FOREACH track IN ['T1', 'T2', 'T3', 'T4'] %]
+            [% SET talk = schedule.$day.$time.$track %]
+            [% IF talk %]
+              <td class="text [%= track %]" rowspan="[%= talk.blocks %]" >
+                [%= talk.title %]<br>
+                <i>[%= talk.name %]</i>
+              </td>
+            [% END %]
+          [% END %]
+        </tr>
+      [% END %]
+    </table>
+  [% END %]
+</div>
+

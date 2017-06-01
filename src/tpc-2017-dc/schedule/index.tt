@@ -50,3 +50,65 @@ We are currently working on the full schedule. In the meantime, here is an outli
 
 \* If less than the minimum amount of students enroll, your registration cost for this session will be refunded and the class will be canceled.
 [%-END %]
+
+[% PERL %]
+use Text::CSV;
+my $csv = Text::CSV->new({binary => 1});
+open my $talks_csv, "<", "src/tpc-2017-dc/talks/talks.csv" or die "Err: $!";
+$csv->header($talks_csv);
+my $talks = [];
+my $schedule = {};
+while(my $row = $csv->getline_hr($talks_csv)) {
+  push @$talks, $row;
+  $schedule->{ $row->{day} }{ $row->{time} }{ $row->{track} } = $row;
+}
+
+$talks = [ sort { $a->{title} cmp $b->{title} } @$talks ];
+
+$stash->set(talks => $talks);
+$stash->set(schedule => $schedule);
+
+[% END %]
+
+<div class="schedule-table">
+  [% FOREACH day IN ['2017-06-19', '2017-06-20', '2017-06-21'] %]
+    Day: [%= day %]
+    <table cellpadding=3px cellspacing=0>
+      <thead>
+        <th>Time</th>
+        <th>T1</th>
+        <th>T2</th>
+        <th>T3</th>
+        <th>T4</th>
+      </thead>
+      [% FOREACH time IN [
+      "09:30",
+      "10:00",
+      "10:30",
+      "11:00",
+      "11:30",
+      "12:00",
+      "12:30",
+      "13:00",
+      "13:30",
+      "14:00",
+      "14:30",
+      "15:00",
+      "15:30",
+      "16:00",
+      "16:30"] %]
+        <tr>
+          <th>[%= time %]</th>
+          [% FOREACH track IN ['T1', 'T2', 'T3', 'T4'] %]
+            [% SET talk = schedule.$day.$time.$track %]
+            [% IF talk %]
+              <td class="text [%= track %]" rowspan="[%= talk.blocks %]" >
+<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a> - [%= talk.name %]
+              </td>
+            [% END %]
+          [% END %]
+        </tr>
+      [% END %]
+    </table>
+  [% END %]
+</div>

@@ -93,4 +93,41 @@ body {
 .talk a {
   text-decoration: none; }
 
+.schedule-flat .table-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 100%; }
+.schedule-flat .text {
+  flex-grow: 1;
+  -webkit-flex-grow: 1; }
+.schedule-flat .text {
+  width: 180px;
+  border: 2px solid #e0e0e0; }
+.schedule-flat .time {
+  flex-grow: 1;
+  -webkit-flex-grow: 1; }
+.schedule-flat .time {
+  width: 50px;
+  border: 2px solid #e0e0e0; }
+.schedule-flat .num {
+  width: 80px; }
+.schedule-flat .table-row.header {
+  background-color: #FFEEDB;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.schedule-table table {
+  cell-spacing: 0; }
+.schedule-table th, .schedule-table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0; }
+
 /*# sourceMappingURL=page.css.map */

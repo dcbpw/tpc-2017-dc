@@ -161,3 +161,75 @@ body {
     text-decoration: none;
   }
 }
+
+
+.schedule-flat {
+  // Main container: initialize the flex, direction is row
+  .table-row {
+    display: flex;           display: -webkit-flex;
+    flex-direction: row;     -webkit-flex-direction: row;
+    flex-grow: 0;            -webkit-flex-grow: 0;
+    flex-wrap: wrap;         -webkit-flex-wrap: wrap;
+    width: 100%;
+    // padding-left: 15px;
+    // padding-right: 15px;
+  }
+
+  // Text based cells: grow, truncate and show ellipsis when there is not enough space
+  .text {
+    flex-grow: 1;            -webkit-flex-grow: 1;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    // padding-right: 20px;
+  }
+
+  // Fix the minimum width of the leaf level cells
+  .text {
+    width: 180px;
+    border: 2px solid #e0e0e0;
+  }
+
+  // Text based cells: grow, truncate and show ellipsis when there is not enough space
+  .time {
+    flex-grow: 1;            -webkit-flex-grow: 1;
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    // padding-right: 20px;
+  }
+
+  // Fix the minimum width of the leaf level cells
+  .time {
+    width: 50px;
+    border: 2px solid #e0e0e0;
+  }
+
+  .num {
+    width: 80px;
+  }
+
+  .table-row {
+    // border: 2px solid #e0e0e0;
+    // border-collapse: collapse;
+    // padding-top: 5px;
+  }
+
+  .table-row.header {
+    background-color: #FFEEDB;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.schedule-table {
+  table {
+    cell-spacing: 0;
+  }
+  th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0;
+  }
+}
