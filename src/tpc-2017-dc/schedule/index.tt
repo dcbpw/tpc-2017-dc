@@ -6,14 +6,14 @@
 
 We are currently working on the full schedule. In the meantime, here is an outline! The pre/post tutorial sessions are separate paid events which you can select when you [register](register). Also check out our list of [talks](talks) while we build the full schedule!
 
-### Sunday 6/18 - Pre-Conference Tutorials
+### Sunday 2017-06-18 - Pre-Conference Tutorials
 
 * <a href="/tpc-2017-dc/talks/#perl_in_a_day">Perl in a Day</a> (John Anderson), $50
 * <a href="/tpc-2017-dc/talks/#introduction_to_moose">Introduction to Moose</a> (Dave Rolsky), $150 (4 person enrollee minimum requirement*)
 * <a href="/tpc-2017-dc/talks/#perl_second_best_practices">Perl Second Best Practices</a> ( Randal Schwartz ) - 1/2 day, $125
 * <a href="/tpc-2017-dc/talks/#unicode_and_associated_punishments">Unicode and Associated Punishments</a> (Ricardo Signes) - 1/2 day, $100 (5 person enrollee minimum requirement*)
 
-### Monday 6/19 - Conference Day 1 USPTO
+### <a href="/tpc-2017-dc/schedule/#2017-06-19">Monday 2017-06-19 - Conference Day 1 USPTO</a>
 
 * Registation, Intro, Announcements, Snacks
 * Talks -- 4 tracks
@@ -21,7 +21,7 @@ We are currently working on the full schedule. In the meantime, here is an outli
 * Keynote
 * Evening activities -- VIP and Sponsors Dinner
 
-### Tuesday 6/20 - Conference Day 2 USPTO
+### <a href="/tpc-2017-dc/schedule/#2017-06-20">Tuesday 2017-06-20 - Conference Day 2 USPTO</a>
 
 * Intro, Announcements, Snacks
 * Talks -- 4 tracks
@@ -29,21 +29,21 @@ We are currently working on the full schedule. In the meantime, here is an outli
 * Keynote
 * Evening activities -- General Event
 
-### Wednesday 6/21 - Conference Day 3 USPTO
+### <a href="/tpc-2017-dc/schedule/#2017-06-21">Wednesday 2017-06-21 - Conference Day 3 USPTO</a>
 
 * Intro, Announcements, Snacks
 * Talks -- 4 tracks
 * Lightning Talks!
 * Keynote
 
-### Thursday 6/22 - Post-Conference Tutorials 1 Holiday Inn - Carlyle
+### Thursday 2017-06-22 - Post-Conference Tutorials 1 Holiday Inn - Carlyle
 
 * <a href="/tpc-2017-dc/talks/#advanced_parsing_techniques_for_perl">Advanced Parsing Techniques</a> (Mark Jason Dominus) - 1/2 day, $75
 * <a href="/tpc-2017-dc/talks/#higher_order_perl">Higher Order Perl</a> (Mark Jason Dominus) - 1/2 day, $75
 * <a href="/tpc-2017-dc/talks/#mongodb_with_perl">MongoDB with Perl</a> (David Golden), $99
 * <a href="/tpc-2017-dc/talks/#new_perl">New Perl</a> (Damian Conway), $150
 
-### Friday 6/23 - Post-Conference Tutorials 2 USPTO
+### Friday 2017-06-23 - Post-Conference Tutorials 2 USPTO
 
 * <a href="/tpc-2017-dc/talks/#parsing_with_perl_6_regexes_and_grammars">Parsing with Perl 6 Regexes and Grammars</a> (Damian Conway), $150
 
@@ -63,6 +63,14 @@ while(my $row = $csv->getline_hr($talks_csv)) {
   $schedule->{ $row->{day} }{ $row->{time} }{ $row->{track} } = $row;
 }
 
+# Also pull in the events
+open $talks_csv, "<", "src/tpc-2017-dc/schedule/events.csv" or die "Err: $!";
+$csv->header($talks_csv);
+while(my $row = $csv->getline_hr($talks_csv)) {
+  push @$talks, $row;
+  $schedule->{ $row->{day} }{ $row->{time} }{ $row->{track} } = $row;
+}
+
 $talks = [ sort { $a->{title} cmp $b->{title} } @$talks ];
 
 $stash->set(talks => $talks);
@@ -72,7 +80,7 @@ $stash->set(schedule => $schedule);
 
 <div class="schedule-table">
   [% FOREACH day IN ['2017-06-19', '2017-06-20', '2017-06-21'] %]
-    Day: [%= day %]
+    <h2 id="[%= day %]">[%= day %]</h2>
     <table cellpadding=3px cellspacing=0>
       <thead>
         <th>Time</th>
@@ -80,8 +88,12 @@ $stash->set(schedule => $schedule);
         <th>T2</th>
         <th>T3</th>
         <th>T4</th>
+        <th>More</th>
       </thead>
       [% FOREACH time IN [
+      "08:00",
+      "08:30",
+      "09:00",
       "09:30",
       "10:00",
       "10:30",
@@ -96,16 +108,28 @@ $stash->set(schedule => $schedule);
       "15:00",
       "15:30",
       "16:00",
-      "16:30"] %]
+      "16:30",
+      "17:00",
+      "17:30",
+      "18:00",
+      ] %]
         <tr>
           <th>[%= time %]</th>
-          [% FOREACH track IN ['T1', 'T2', 'T3', 'T4'] %]
+          [% FOREACH track IN ['ALL', 'T1', 'T2', 'T3', 'T4'] %]
             [% SET talk = schedule.$day.$time.$track %]
             [% IF talk %]
-              <td class="text [%= track %]" rowspan="[%= talk.blocks %]" >
+              <td class="text [%= track %]" rowspan="[%= talk.blocks %]"
+                [%- IF track == 'ALL' and talk.title != 'Lunch' %]colspan=5[%- END %]
+                [%- IF talk.title == 'Lunch' %]colspan=4[%- END %]
+                >
 <a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a> - [%= talk.name %]
               </td>
             [% END %]
+          [% END %]
+          [% IF time == "09:30" %]
+            <td rowspan=12 style="vertical-align: bottom"><div style="float: left; transform: rotate(270deg); transform-origin: left top 0; margin: 0px 0px 0px 0px; width: 0px; position: relative; left: 10px; ">
+            Hackathon&nbsp;&amp;&nbsp;BOF[% IF day == '2017-06-20' %],&nbsp;and&nbsp;Sponsor&nbsp;Expo[% END %]
+            </div></td>
           [% END %]
         </tr>
       [% END %]
