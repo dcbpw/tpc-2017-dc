@@ -94,10 +94,20 @@ $stash->set(schedule => $schedule);
     <table>
       <thead>
         <th>Time</th>
+        [% IF day == '2017-06-22' %]
+        <th>Alexandria</th>
+        <th>Potomac</th>
+        <th>Mount Vernon 1</th>
+        [% ELSE %]
         <th>Madison A</th>
+        [% IF day != '2017-06-23' %]
         <th>Madison B</th>
         <th>Knox</th>
+        [% IF day != '2017-06-18' %]
         <th>Jefferson</th>
+        [% END %]
+        [% END %]
+        [% END %]
         <th>More</th>
       </thead>
       [% FOREACH time IN [
