@@ -56,9 +56,21 @@ open my $talks_csv, "<", "src/tpc-2017-dc/talks/talks.csv" or die "Err: $!";
 $csv->header($talks_csv);
 my $talks = [];
 my $schedule = {};
+my $append_to_table = sub {
+  my ($row) = shift;
+  $schedule->{ $row->{day} }{ $row->{time} }{ $row->{track} } = $row;
+};
 while(my $row = $csv->getline_hr($talks_csv)) {
   push @$talks, $row;
-  $schedule->{ $row->{day} }{ $row->{time} }{ $row->{track} } = $row;
+  if ($row->{day} =~ /(18|22|23)$/ && $row->{blocks} == '12') {
+    my $virtualrow;
+    $row->{blocks} = 6;
+    $virtualrow = { %$row };
+    $virtualrow->{time} = '14:00';
+    $virtualrow->{title} .= ' (cont.)';
+    $append_to_table->($virtualrow);
+  }
+  $append_to_table->($row);
 }
 
 # Also pull in the events
