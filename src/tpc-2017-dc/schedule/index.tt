@@ -77,7 +77,7 @@ $stash->set(schedule => $schedule);
 [% END %]
 
 <div class="schedule-table">
-  [% FOREACH day IN ['2017-06-19', '2017-06-20', '2017-06-21'] %]
+  [% FOREACH day IN ['2017-06-18', '2017-06-19', '2017-06-20', '2017-06-21', '2017-06-22', '2017-06-23'] %]
     <h2 id="[%= day %]">[%= day %]</h2>
     <table>
       <thead>
