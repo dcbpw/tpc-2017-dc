@@ -124,10 +124,31 @@ body {
   padding-bottom: 8px; }
 
 .schedule-table table {
-  cell-spacing: 0; }
+  border: 0px;
+  cell-spacing: 25;
+  background-color: #EEE;
+  border-radius: 10px 20px; }
 .schedule-table th, .schedule-table td {
-  border: 1px solid black;
+  border: 0px solid white;
+  padding: 5px;
+  text-align: center;
   border-collapse: collapse;
-  margin: 0; }
+  margin: 2px;
+  border-radius: 5px 5px; }
+.schedule-table h2 {
+  display: block;
+  background-color: #CDC;
+  border-radius: 5px 10px;
+  text-indent: 2em; }
+.schedule-table .T1, .schedule-table .T2, .schedule-table .T3, .schedule-table .T4 {
+  box-shadow: 1px 1px 3px grey; }
+.schedule-table .T1 {
+  background-color: #FFF; }
+.schedule-table .T2 {
+  background-color: #FFD; }
+.schedule-table .T3 {
+  background-color: #FED; }
+.schedule-table .T4 {
+  background-color: #FDD; }
 
 /*# sourceMappingURL=page.css.map */
