@@ -79,13 +79,13 @@ $stash->set(schedule => $schedule);
 <div class="schedule-table">
   [% FOREACH day IN ['2017-06-19', '2017-06-20', '2017-06-21'] %]
     <h2 id="[%= day %]">[%= day %]</h2>
-    <table cellpadding=3px cellspacing=0>
+    <table>
       <thead>
         <th>Time</th>
-        <th>T1</th>
-        <th>T2</th>
-        <th>T3</th>
-        <th>T4</th>
+        <th>Madison A</th>
+        <th>Madison B</th>
+        <th>Knox</th>
+        <th>Jefferson</th>
         <th>More</th>
       </thead>
       [% FOREACH time IN [
@@ -120,7 +120,7 @@ $stash->set(schedule => $schedule);
                 [%- IF track == 'ALL' and talk.title != 'Lunch' %]colspan=5[%- END %]
                 [%- IF talk.title == 'Lunch' %]colspan=4[%- END %]
                 >
-<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a> - [%= talk.name %]
+<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a><BR>[%= talk.name %]
               </td>
             [% END %]
           [% END %]

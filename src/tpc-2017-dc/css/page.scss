@@ -225,11 +225,38 @@ body {
 
 .schedule-table {
   table {
-    cell-spacing: 0;
+    border: 0px;
+    cell-spacing: 4px;
+    background-color: #EEE;
+    border-radius: 10px 20px;
   }
   th, td {
-    border: 1px solid black;
+    border: 0px solid white;
+    padding: 5px;
+    text-align: center;
     border-collapse: collapse;
-    margin: 0;
+    margin: 2px;
+    border-radius: 5px 5px;
   }
+  h2 {
+    display: block;
+    background-color: #CDC;
+    border-radius: 5px 10px;  
+    text-indent: 2em;
+  }
+  .T1, .T2, .T3, .T4 {
+    box-shadow: 1px 1px 3px grey;
+  }
+  .T1 {
+    background-color: #FFF;
+  }
+  .T2 {
+    background-color: #FFD;
+  }
+  .T3 {
+    background-color: #FED;
+  }
+  .T4 {
+    background-color: #FDD;
+  } 
 }
