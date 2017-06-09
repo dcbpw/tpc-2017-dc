@@ -113,11 +113,17 @@ $stash->set(schedule => $schedule);
       ] %]
         <tr>
           <th>[%= time %]</th>
-          [% FOREACH track IN ['ALL', 'Madison A', 'Madison B', 'Knox', 'Jefferson'] %]
+          [% FOREACH tracknum IN ['ALL', 'T1', 'T2', 'T3', 'T4'] %]
+            [% SET track = undef %]
+            [% IF tracknum == 'ALL' %][% SET track = 'ALL' %][% END %]
+            [% IF tracknum == 'T1' %][% SET track = 'Madison A' %][% END %]
+            [% IF tracknum == 'T2' %][% SET track = 'Madison B' %][% END %]
+            [% IF tracknum == 'T3' %][% SET track = 'Knox' %][% END %]
+            [% IF tracknum == 'T4' %][% SET track = 'Jefferson' %][% END %]
             [% SET talk = schedule.$day.$time.$track %]
             [% IF talk %]
-              <td class="text [%= track %]" rowspan="[%= talk.blocks %]"
-                [%- IF track == 'ALL' and talk.title != 'Lunch' %]colspan=5[%- END %]
+              <td class="text [%= tracknum %]" rowspan="[%= talk.blocks %]"
+                [%- IF tracknum == 'ALL' and talk.title != 'Lunch' %]colspan=5[%- END %]
                 [%- IF talk.title == 'Lunch' %]colspan=4[%- END %]
                 >
 <a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a><BR>[%= talk.name %]
