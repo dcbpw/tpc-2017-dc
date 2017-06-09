@@ -215,7 +215,7 @@ Since it's powered by RapidApp, the initialization of the storage model is all a
 If you want to try another blog with maximalist features but minimalist effort, or, if you just want to see my/RapidApp's take on the blog question, this talk is for you. Just like previous RapidApp talks, this one will consist of all live-running, real-time demos (which you can run yourself), and should be a lot of fun. 
 "
 Sam Batschelet,hexfusion,hexfusion,,https://pbs.twimg.com/profile_images/647563978952970240/w-QsrKyj_400x400.png,"Sam is a Linux system administrator and developer whose specialties include ecommerce,  custom development platforms, Perl Dancer, DBIx::Class and cloud technologies. He is passionate about solving problems with open source solutions.",Standard Talk - 50 minutes,2,2017-06-20,09:30,Madison A,Whatever,Intermediate,Dancing In The Cloud,"This talk will walk though using Perl with the distributed key store etcd. I will also share a few new modules that I have been working on (Etcd3 and Dancer2::Plugin:Etcd) providing Perl and Dancer developers with cloud based authentication, and configuration management/storage options for their apps."
-,,,,,,Standard Talk - 50 minutes,2,2017-06-20,09:30,Madison B,Science & Data,Intermediate,,
+Larry Wall,lwall,timtoady,,,,Standard Talk - 50 minutes,2,2017-06-20,09:30,Madison B,Whatever,Any,Q&A With Larry Wall,Larry Wall has the floor and maybe a projector, come and ask him things!
 Frew Schmidt,frew,frioux,https://blog.afoolishmanifesto.com,https://blog.afoolishmanifesto.com/static/img/me200.gif,fREW Schmidt ,Standard Talk - 50 minutes,2,2017-06-20,09:30,Knox,"Test, Debug, Optimize",Intermediate,"Scaling, Reliability, and Performance at ZipRecruiter","ZipRecruiter gets tens of millions of views a day. This talk will detail what we have done to ensure that we can keep growing without going down while maintaining a snappy user experience.
 
 Major topics of discussion include database technologies, monitoring, timeouts, caching, and more.  All of this is regarding Perl, though very little of this information is limited to Perl applications.
@@ -405,7 +405,7 @@ In this class, we will see how to build a parsing system that is unlimited in ex
 *  Operator overloading
 
 This tutorial requires a separate $75 ticket."
-Mark Jason Dominus,mjd,,http://perl.plover.com/,,,Half Day Tutorial,6,2017-06-22,09:00,Madison B,Tutorial,Intermediate,Higher-Order Perl,"It's well-known that Perl resembles
+Mark Jason Dominus,mjd,,http://perl.plover.com/,,,Half Day Tutorial,6,2017-06-22,09:00,Carlyle,Tutorial,Intermediate,Higher-Order Perl,"It's well-known that Perl resembles
 languages used in the Unix sysadmin community, such as C, Bourne shell, awk, and sed. Perl programmers tend to come from
 that community, or to have been trained by people who did.
 
