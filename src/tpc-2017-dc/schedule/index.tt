@@ -113,7 +113,7 @@ $stash->set(schedule => $schedule);
       ] %]
         <tr>
           <th>[%= time %]</th>
-          [% FOREACH track IN ['ALL', 'T1', 'T2', 'T3', 'T4'] %]
+          [% FOREACH track IN ['ALL', 'Madison A', 'Madison B', 'Knox', 'Jefferson'] %]
             [% SET talk = schedule.$day.$time.$track %]
             [% IF talk %]
               <td class="text [%= track %]" rowspan="[%= talk.blocks %]"
