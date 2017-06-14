@@ -23,62 +23,19 @@ $sponsors = [ sort { $a->{title} cmp $b->{title} } @$sponsors ];
 
 $stash->set(sponsors => $sponsors);
 
+# Name,ImageURL,Description,WebsiteUrl,TwitterUrl,SponsorLevel
+
 [% END %]
 
 [% FOREACH sponsor IN sponsors %]
 <div class=sponsor>
-<a href="/tpc-2017-dc/sponsors/#[%= sponsor.title.lower.replace('\W+','_') %]">[%= sponsor.title %]</a> - [%= sponsor.name %]
-[% IF sponsor.twitter_username %]
-  <a href="http://twitter.com/[%= sponsor.twitter_username %]">
+<a href="[%= sponsor.website_url %]"><img src="[%= sponsor.image_url %]"> [%= sponsor.name %]</a> ([%= sponsor.sponsor_level %])
+[% IF sponsor.twitter_url %]
+  <a href="http://twitter.com/[%= sponsor.twitter_url %]">
     <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
   </a>
 [% END %]
-[% IF sponsor.cpan_username %]
-  <a href="https://www.metacpan.org/author/[%= sponsor.cpan_username %]">
-    <img src="/tpc-2017-dc/img/metacpan-icon.png">
-  </a>
-[% END %]
+<blockquote>[%= sponsor.description %]</blockquote>
 </div>
-[% END %]
-
-<hr>
-
-[% FOREACH sponsor IN sponsors %]
-<div class=sponsor id="[%= sponsor.title.lower.replace('\W+','_') %]">
-<h2>[%= sponsor.title %]</h2>
-[%= sponsor.presentation_type %], [%= sponsor.audience_experience %]
-
-<h3>[%= sponsor.name %]
-[% IF sponsor.twitter_username %]
-  <a href="http://twitter.com/[%= sponsor.twitter_username %]">
-    <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
-  </a>
-[% END %]
-
-[% IF sponsor.cpan_username %]
-  <a href="https://www.metacpan.org/author/[%= sponsor.cpan_username %]">
-    <img src="/tpc-2017-dc/img/metacpan-icon.png">
-  </a>
-[% END %]
-
-</h3>
-
-[% FILTER markdown %]
-[%= sponsor.public_description %]
-[% END %]
-
-<blockquote>
-[% IF sponsor.photo_url %]
-  <img src="[%= sponsor.photo_url %]" style="width: 107px; float:left; margin: 0 1em 1em 1em">
-[% END %]
-
-<i>
-[% FILTER markdown %]
-[%= sponsor.brief_bio %]
-[% END %]
-</i></blockquote>
-
-</div>
-<hr style="clear: both;">
 [% END %]
 
