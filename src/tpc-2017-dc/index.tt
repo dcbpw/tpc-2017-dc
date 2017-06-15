@@ -22,6 +22,37 @@
 
 </div>
 
+[% PERL %]
+use Text::CSV;
+my $csv = Text::CSV->new({binary => 1});
+open my $sponsors_csv, "<", "src/tpc-2017-dc/sponsors/sponsors.csv" or die "Err: $!";
+$csv->header($sponsors_csv);
+my $sponsors = [];
+while(my $row = $csv->getline_hr($sponsors_csv)) {
+  push @$sponsors, $row;
+}
+
+$sponsors = [ sort { $a->{title} cmp $b->{title} } @$sponsors ];
+
+$stash->set(sponsors => $sponsors);
+
+# Name,ImageURL,Description,WebsiteUrl,TwitterUrl,SponsorLevel
+
+[% END %]
+
+<div class="flex-row">
+[% FOREACH sponsor IN sponsors %]
+<div class=sponsor>
+<a href="[%= sponsor.websiteurl %]"><img height="20px" src="[%= sponsor.imageurl %]"><br/>[%= sponsor.name %]</a>
+[% IF sponsor.description %]
+  <blockquote>[%= sponsor.description %]</blockquote>
+[% END %]
+</div>
+[% END %]
+</div>
+
+<p>&nbsp;</p>
+
 <div class="flex-row logo-row">
   <a href="https://en.wikipedia.org/wiki/United_States_Patent_and_Trademark_Office"><img src="/tpc-2017-dc/img/USPTOHeadquarters.jpg"></a>
   <a href="http://www.uspto.gov/"><img src="/tpc-2017-dc/img/uspto-logo.png"></a>
