@@ -100,7 +100,7 @@ $stash->set(schedule => $schedule);
                 [%- IF tracknum == 'ALL' and talk.title != 'Lunch' %]colspan=5[%- END %]
                 [%- IF talk.title == 'Lunch' %]colspan=4[%- END %]
                 >
-<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a><BR>[%= talk.name %]
+<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a><BR>[%= talk.name %] [% IF talk.blocks == 1 %](20 min)[% ELSIF talk.blocks == 2 %](50 min)[% END %]
               </td>
             [% END %]
           [% END %]
