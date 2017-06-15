@@ -1,49 +1,4 @@
-<html>
-  <head>
-    <base href="/tpc-2017-dc/">
-    <!-- <base href="/"> -->
-
-    <title>The Perl Conference 2017 in DC (YAPC::NA 2017)</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="css/page.css"/>
-    <meta name="theme-color" content="#a4825a">
-  </head>
-
-  <body>
-    <div class="page">
-      <div class="header">
-        <div class="logo">
-          <!-- <img src="img/chainsawarmyknife_november22016.png"> -->
-          <img src="img/chainsaw-v5.png">
-        </div>
-        <div class="title">
-          <h1>The Perl Conference 2017 in DC</h1>
-          <h3>US Patent and Trademark Office, June 18-23</h3>
-          <h3>(YAPC::NA 2017)</h3>
-        </div>
-        <div class="media">
-          <a href="https://twitter.com/@perlconferences"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png"></a>
-          <a href="https://www.facebook.com/tpf.perl"><img src="https://image.freepik.com/free-icon/facebook-symbol_318-37686.jpg"></a>
-          <a href="http://www.perlfoundation.org/"><img src="/tpc-2017-dc/img/perl-onion.png"></a>
-        </div>
-      </div>
-      <div class="nav">
-        <a href="./">Home</a>
-        <a href="register/">Register</a>
-        <a href="https://github.com/dcbpw/tpc-2017-dc/wiki/Lightning-Talks">Lightning talks!</a>
-        <!-- <a href="cfp/">CFP</a> -->
-        <a href="schedule/">Schedule</a>
-        <!-- <a href="talks/">Talks</a> -->
-        <a href="location/">Location</a>
-        <a href="hotel/">Where to stay</a>
-        <a href="soc/">Standards of Conduct</a>
-        <a href="https://github.com/dcbpw/tpc-2017-dc/wiki">Wiki</a>
-      </div>
-      <div class="content">
-
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -174,10 +129,3 @@
            style="fill:#706d6e;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path56"
            inkscape:connector-curvature="0" /></g></g></g></svg>
-
-        <p><hr><a href="contact/">Contact</a></p>
-      </div>
-    </div>
-  </body>
-</html>
-
