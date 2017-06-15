@@ -29,13 +29,15 @@ $stash->set(sponsors => $sponsors);
 
 [% FOREACH sponsor IN sponsors %]
 <div class=sponsor>
-<a href="[%= sponsor.website_url %]"><img src="[%= sponsor.image_url %]"> [%= sponsor.name %]</a> ([%= sponsor.sponsor_level %])
-[% IF sponsor.twitter_url %]
-  <a href="http://twitter.com/[%= sponsor.twitter_url %]">
+<a href="[%= sponsor.websiteurl %]"><img src="[%= sponsor.imageurl %]"> [%= sponsor.name %]</a> ([%= sponsor.sponsorlevel %])
+[% IF sponsor.twitterurl %]
+  <a href="http://twitter.com/[%= sponsor.twitterurl %]">
     <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
   </a>
 [% END %]
-<blockquote>[%= sponsor.description %]</blockquote>
+[% IF sponsor.description %]
+  <blockquote>[%= sponsor.description %]</blockquote>
+[% END %]
 </div>
 [% END %]
 

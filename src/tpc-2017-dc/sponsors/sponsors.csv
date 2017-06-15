@@ -1,9 +1,9 @@
 Name,ImageURL,Description,WebsiteUrl,TwitterUrl,SponsorLevel
-craigslist,,,www.craigslist.org,,Diamond
-cPanel,,,cpanel.com,,Platinum
+craigslist,/tpc-2017-dc/img/sponsors/craigslist.png,,www.craigslist.org,,Diamond
+cPanel,/tpc-2017-dc/img/sponsors/cPanel.png,,cpanel.com,,Platinum
 BlueHost,,,bluehost.com,,Silver
-Grant Street Group,,,grantstreet.com,,Bronze
+"Grant Street Group",,,grantstreet.com,,Bronze
 Assurant,,,assurant.com,,Bronze
-Infinity Interactive,,,iinteractive.com,,Tutorial Session/App
-Think Geek,/tpc-2017-dc/img/sponsors/tg_color_small.png,,https://thinkgeek.com,,TPC Event sponsor $500
-MongoDB,,,mongodb.com,,Tutorial Session
+"Infinity Interactive",/tpc-2017-dc/img/sponsors/infinityinteractive.png,,iinteractive.com,,"Tutorial Session/App"
+"Think Geek",/tpc-2017-dc/img/sponsors/tg_color_small.png,,https://thinkgeek.com,,"TPC Event sponsor $500"
+MongoDB,,,mongodb.com,,"Tutorial Session"
