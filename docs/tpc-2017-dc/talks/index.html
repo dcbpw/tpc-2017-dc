@@ -73,6 +73,12 @@
 </div>
 
 <div class=talk>
+<a href="/tpc-2017-dc/talks/#"></a> - 
+
+
+</div>
+
+<div class=talk>
 <a href="/tpc-2017-dc/talks/#a_brief_history_of_timekeeping">A Brief History of Timekeeping</a> - Kivanc Yazan
 
   <a href="http://twitter.com/kyzn">
@@ -429,16 +435,6 @@
   <a href="https://www.metacpan.org/author/atoomic">
     <img src="/tpc-2017-dc/img/metacpan-icon.png">
   </a>
-
-</div>
-
-<div class=talk>
-<a href="/tpc-2017-dc/talks/#kangiten_pdf_writer_pdf_reuse_reduce_recycle_a_pdf_document_creator_for_structured_content">Kangiten PDF-Writer (PDF-Reuse + Reduce & Recycle) - a PDF Document Creator for Structured Content</a> - Raja Renga Bashyam
-
-  <a href="http://twitter.com/rajawebstars">
-    <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
-  </a>
-
 
 </div>
 
@@ -951,6 +947,30 @@
 
 <hr>
 
+
+<div class=talk id="">
+<h2></h2> Standard Talk - 50 minutes, Any
+
+<h3>
+
+
+
+
+</h3>
+
+
+
+
+<blockquote>
+
+
+<i>
+
+
+</i></blockquote>
+
+</div>
+<hr style="clear: both;">
 
 <div class=talk id="">
 <h2></h2> Short Talk - 20 minutes, Any
@@ -2076,92 +2096,6 @@ William has invented technology for open source license management (U.S. Pat. 8,
 
 <i>
 <p>perl lover &amp; hacker</p>
-
-</i></blockquote>
-
-</div>
-<hr style="clear: both;">
-
-<div class=talk id="kangiten_pdf_writer_pdf_reuse_reduce_recycle_a_pdf_document_creator_for_structured_content">
-<h2>Kangiten PDF-Writer (PDF-Reuse + Reduce & Recycle) - a PDF Document Creator for Structured Content</h2> Standard Talk - 50 minutes, Any
-
-<h3>Raja Renga Bashyam
-
-  <a href="http://twitter.com/rajawebstars">
-    <img width="16px" src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png">
-  </a>
-
-
-
-
-</h3>
-
-<p>Kangiten will produce PDF documents based on PDF-Resuse module. It will reduce inline manual format instructions by a structured HoH bulk input. Kangiten produces the document in a two stage way.   Creation of structure first than filling the content. The two way method will help to reuse the structure in similar needs and recycle the structure to meet minor variation.</p>
-
-<p>During implementation of a billing solution for Advertising Agency, we have requirements to produce PDF documents with six different structures and the document structure shared by 3 different legal entities with minor variations. It has the usual Estimate – Purchase Order -> Invoice with Detail, Rate, Qty and Amount with varied additional columns for Print Media and A/V works. Mainly we looked for a PDF library with:</p>
-
-<ol>
-<li>Ability to tailor build the document</li>
-<li>A module that gives production control in pixel level</li>
-<li>Flexible options to set page properties</li>
-<li>Option to implement images/signatures</li>
-<li>Position control to handle page continuation</li>
-</ol>
-
-<p>After a lengthy search, we finally zeroed in PDF-Reuse module. It did not have user friendly function wraps for graphical output, but it offered a developer friendly core functions to control the graphical output in a pixel level. It helped to wrap our custom functions to handle in generic way.</p>
-
-<p>Map to Reuse, Reduce &amp; Recycle</p>
-
-<p>One of PDF:: Reuse’s main advantage is that it can take an existing PDF - something that our designers can create with their standard PDF tools and then all we have to do is add the various content details to it. The feature of reusing the existing PDF and writing content over that, helped to reuse the existing legal entity letter pads in specific company document production.  It's avoided manual graphic production work.</p>
-
-<p>Instead of line by line manual instruction to write and format, we used a structured bulk input to create structure with format need and fill the content.  The PDF::Reuse core function mapped to input data.</p>
-
-<p>The document classified into three major parts:</p>
-
-<ol>
-<li>The page layout and page background</li>
-<li>Header</li>
-<li>Content</li>
-</ol>
-
-<p>Each input will take the communication in HoH structure.</p>
-
-<p>A simple structure to produce one line seems like:</p>
-
-<pre><code># Data structure input for produce one liner output
-# base structure
-my $print_data = {
-    0 =&gt; {
-        left_xaxis  =&gt; 250,     # print start x position
-        line_height =&gt; 25,
-        # column definition
-        header =&gt; {
-            # define the first (and only) column
-            0 =&gt; {
-                font      =&gt; 'Helvetica-Bold',
-                font_size =&gt; 12,
-            },
-        },
-        # insert the data
-        data =&gt; [['Production Estimate']],
-    },
- };
-</code></pre>
-
-<p>The same structure can be reused to similar needs and adjusted to minor variations and duplicated to continuous need.  Based on the structure it will produce single row &amp; multiple row contents.  It's continuously evolved to meet real time needs. Some of the features like  header continuation to new pages,  table header to new pages, auto compress the document size  added incrementally.</p>
-
-<p>Started from  billing solution, now it helps in many of our PDF document productions needs. Now it's available in public.</p>
-
-<p>https://github.com/WebstarsCG/Kangiten-PDF-Writer</p>
-
-<p>In this talk, I will share the tools inner components,  existing use cases and a short hands-on implementation on structured way of document generation to achieve Reuse Structure, Reduce Code &amp; Development Time  &amp; Recycle the structures to meet variations.</p>
-
-
-<blockquote>
-
-
-<i>
-<p>A Perl Artist, Web App Developer &amp; Web Designer from Indian Subcontinent.  More than a decade of friendship with Perl to solve challenges of various kinds in computing. Working on a comprehensive reporting frame work and regular expression based action system in Perl.</p>
 
 </i></blockquote>
 
