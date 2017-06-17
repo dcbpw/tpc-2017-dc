@@ -19,8 +19,6 @@ while(my $row = $csv->getline_hr($sponsors_csv)) {
   push @$sponsors, $row;
 }
 
-$sponsors = [ sort { $a->{title} cmp $b->{title} } @$sponsors ];
-
 $stash->set(sponsors => $sponsors);
 
 # Name,ImageURL,Description,WebsiteUrl,TwitterUrl,SponsorLevel
