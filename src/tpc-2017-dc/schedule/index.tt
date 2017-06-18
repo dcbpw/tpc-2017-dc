@@ -56,8 +56,8 @@ $stash->set(schedule => $schedule);
     <table>
       <thead>
         <th>Time</th>
-        <th>Madison A</th>
-        <th>Madison B</th>
+        <th>Madison A (South)</th>
+        <th>Madison B (North)</th>
         <th>Knox</th>
         <th>Jefferson</th>
         <th>More</th>
@@ -90,8 +90,8 @@ $stash->set(schedule => $schedule);
           [% FOREACH tracknum IN ['ALL', 'T1', 'T2', 'T3', 'T4'] %]
             [% SET track = undef %]
             [% IF tracknum == 'ALL' %][% SET track = 'ALL' %][% END %]
-            [% IF tracknum == 'T1' %][% SET track = 'Madison A' %][% END %]
-            [% IF tracknum == 'T2' %][% SET track = 'Madison B' %][% END %]
+            [% IF tracknum == 'T1' %][% SET track = 'Madison A (South)' %][% END %]
+            [% IF tracknum == 'T2' %][% SET track = 'Madison B (North)' %][% END %]
             [% IF tracknum == 'T3' %][% SET track = 'Knox' %][% END %]
             [% IF tracknum == 'T4' %][% SET track = 'Jefferson' %][% END %]
             [% SET talk = schedule.$day.$time.$track %]
