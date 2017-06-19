@@ -26,6 +26,7 @@ $stash->set(talks => $talks);
 [% END %]
 
 [% FOREACH talk IN talks %]
+[% IF talk.title %]
 <div class=talk>
 <a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a> - [%= talk.name %]
 [% IF talk.twitter_username %]
@@ -39,6 +40,7 @@ $stash->set(talks => $talks);
   </a>
 [% END %]
 </div>
+[% END %]
 [% END %]
 
 <hr>
