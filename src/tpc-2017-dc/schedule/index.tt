@@ -104,7 +104,7 @@ $stash->set(schedule => $schedule);
               </td>
             [% END %]
           [% END %]
-          [% IF time == "09:30" %]
+          [% IF time == "09:45" %]
             <td rowspan=12 style="vertical-align: bottom"><div style="float: left; transform: rotate(270deg); transform-origin: left top 0; margin: 0px 0px 0px 0px; width: 0px; position: relative; left: 10px; ">
             Hackathon&nbsp;&amp;&nbsp;BOF[% IF day == '2017-06-20' %],&nbsp;and&nbsp;Sponsor&nbsp;Expo[% END %]
             </div></td>
