@@ -51,7 +51,72 @@ $stash->set(schedule => $schedule);
 [% END %]
 
 <div class="schedule-table">
-  [% FOREACH day IN ['2017-06-19', '2017-06-20', '2017-06-21'] %]
+  [% FOREACH day IN ['2017-06-19'] %]
+    <h2 id="[%= day %]">[%= day %]</h2>
+    <table>
+      <thead>
+        <th>Time</th>
+        <th>Madison A (South)</th>
+        <th>Madison B (North)</th>
+        <th>Knox</th>
+        <th>Jefferson</th>
+        <th>More</th>
+      </thead>
+      [% FOREACH time IN [
+      "08:00",
+      "08:30",
+      "09:00",
+      "09:45",
+      "10:15",
+      "10:45",
+      "11:15",
+      "11:45",
+      "12:00",
+      "12:30",
+      "13:00",
+      "13:30",
+      "14:00",
+      "14:30",
+      "15:00",
+      "15:30",
+      "16:00",
+      "16:30",
+      "17:00",
+      "17:30",
+      "18:00",
+      ] %]
+        <tr>
+          <th>[%= time %]</th>
+          [% FOREACH tracknum IN ['ALL', 'T1', 'T2', 'T3', 'T4'] %]
+            [% SET track = undef %]
+            [% IF tracknum == 'ALL' %][% SET track = 'ALL' %][% END %]
+            [% IF tracknum == 'T1' %][% SET track = 'Madison A (South)' %][% END %]
+            [% IF tracknum == 'T2' %][% SET track = 'Madison B (North)' %][% END %]
+            [% IF tracknum == 'T3' %][% SET track = 'Knox' %][% END %]
+            [% IF tracknum == 'T4' %][% SET track = 'Jefferson' %][% END %]
+            [% SET talk = schedule.$day.$time.$track %]
+            [% IF talk %]
+              <td class="text [%= tracknum %]" rowspan="[%= talk.blocks %]"
+                [%- IF tracknum == 'ALL' and talk.title != 'Lunch' %]colspan=5[%- END %]
+                [%- IF talk.title == 'Lunch' %]colspan=4[%- END %]
+                >
+<a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a><BR>[%= talk.name %] [% IF talk.blocks == 1 %](20 min)[% ELSIF talk.blocks == 2 %](50 min)[% END %]
+              </td>
+            [% END %]
+          [% END %]
+          [% IF time == "09:30" %]
+            <td rowspan=12 style="vertical-align: bottom"><div style="float: left; transform: rotate(270deg); transform-origin: left top 0; margin: 0px 0px 0px 0px; width: 0px; position: relative; left: 10px; ">
+            Hackathon&nbsp;&amp;&nbsp;BOF[% IF day == '2017-06-20' %],&nbsp;and&nbsp;Sponsor&nbsp;Expo[% END %]
+            </div></td>
+          [% END %]
+        </tr>
+      [% END %]
+    </table>
+  [% END %]
+</div>
+
+<div class="schedule-table">
+  [% FOREACH day IN ['2017-06-20', '2017-06-21'] %]
     <h2 id="[%= day %]">[%= day %]</h2>
     <table>
       <thead>
