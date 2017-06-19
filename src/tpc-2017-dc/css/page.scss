@@ -13,7 +13,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
+  @media (min-width: 768px) {
+      flex-flow: column wrap;
+  }
   // justify-content: center;
   align-items: center;
   // font-size: 1.2vmin;

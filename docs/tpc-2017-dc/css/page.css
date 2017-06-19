@@ -3,10 +3,12 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
   align-items: center;
   font-size: 120%;
   line-height: 1.4; }
+  @media (min-width: 768px) {
+    body {
+      flex-flow: column wrap; } }
 
 .page {
   margin: 1em;
