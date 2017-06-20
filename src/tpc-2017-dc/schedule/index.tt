@@ -57,7 +57,7 @@ $stash->set(schedule => $schedule);
     </h2>
     <table>
       <thead>
-        <th>Time</th>
+        <th>Start Time</th>
         <th>Madison A (South)</th>
         <th>Madison B (North)</th>
         <th>Knox</th>
@@ -125,7 +125,7 @@ $stash->set(schedule => $schedule);
     </h2>
     <table>
       <thead>
-        <th>Time</th>
+        <th>Start Time</th>
         <th>Madison A (South)</th>
         <th>Madison B (North)</th>
         <th>Knox</th>
