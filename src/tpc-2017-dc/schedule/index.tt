@@ -52,7 +52,9 @@ $stash->set(schedule => $schedule);
 
 <div class="schedule-table">
   [% FOREACH day IN ['2017-06-19'] %]
-    <h2 id="[%= day %]">[%= day %]</h2>
+    <h2 id="[%= day %]">[%= day %]
+      [% IF day == '2017-06-19' %]Monday[% END %]
+    </h2>
     <table>
       <thead>
         <th>Time</th>
@@ -117,7 +119,10 @@ $stash->set(schedule => $schedule);
 
 <div class="schedule-table">
   [% FOREACH day IN ['2017-06-20', '2017-06-21'] %]
-    <h2 id="[%= day %]">[%= day %]</h2>
+    <h2 id="[%= day %]">[%= day %]
+      [% IF day == '2017-06-20' %]Tuesday[% END %]
+      [% IF day == '2017-06-21' %]Wednesday[% END %]
+    </h2>
     <table>
       <thead>
         <th>Time</th>
@@ -129,29 +134,31 @@ $stash->set(schedule => $schedule);
       </thead>
       [% FOREACH time IN [
       "08:00",
-      "08:30",
+      "&nbsp;",
       "09:00",
       "09:30",
-      "10:00",
-      "10:30",
-      "11:00",
-      "11:30",
+      "&nbsp;",
+      "10:35",
+      "11:05",
+      "11:40",
       "12:00",
-      "12:30",
-      "13:00",
-      "13:30",
-      "14:00",
-      "14:30",
-      "15:00",
-      "15:30",
+      "&nbsp;",
+      "&nbsp;",
+      "13:45",
+      "14:20",
+      "14:55",
+      "&nbsp;",
+      "15:45",
       "16:00",
-      "16:30",
+      "&nbsp;",
       "17:00",
-      "17:30",
+      "&nbsp;",
       "18:00",
       ] %]
+        [% IF day == '2017-06-20' and time == '11:05' %][% SET time = '&nbsp;' %][% END %]
+        [% IF day == '2017-06-20' and time == '14:20' %][% SET time = '&nbsp;' %][% END %]
         <tr>
-          <th>[%= time %]</th>
+          <th valign=top>[%= time %]</th>
           [% FOREACH tracknum IN ['ALL', 'T1', 'T2', 'T3', 'T4'] %]
             [% SET track = undef %]
             [% IF tracknum == 'ALL' %][% SET track = 'ALL' %][% END %]
@@ -166,6 +173,7 @@ $stash->set(schedule => $schedule);
                 [%- IF talk.title == 'Lunch' %]colspan=4[%- END %]
                 >
 <a href="/tpc-2017-dc/talks/#[%= talk.title.lower.replace('\W+','_') %]">[%= talk.title %]</a><BR>[%= talk.name %] [% IF talk.blocks == 1 %](20 min)[% ELSIF talk.blocks == 2 %](50 min)[% END %]
+[% IF talk.end %]<br>[%= talk.time %] - [%= talk.end %][% END %]
               </td>
             [% END %]
           [% END %]
