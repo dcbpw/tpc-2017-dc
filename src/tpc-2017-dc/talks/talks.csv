@@ -398,15 +398,4 @@ This talk will:
 * discuss common developer habits that can make logs less useful
 * explain techniques to preserve informative development history
 "
-Kevin A. McGrail (KAM),,,,,"Kevin A. McGrail is chair emeritus of the Apache SpamAssassin project and an expert in email security. He is an advocate of open source software where he is better known as KAM. He serves as the VP of Fundraising for the Apache Software Foundation. Outside of the open source world, he is the CEO of Peregrine Computer Consultants and an Advisory Board member at Virtru. When he dreams, he dreams in Perl.",Standard Talk - 50 minutes,2,2017-06-21,09:30,10:20,Jefferson,Whatever,Any,"How-to Reuse the same Perl code for Email, Websites and System Administration","This track is a tutorial for Intermediate Perl administrators who want to learn a few tricks to administer boxes, automate websites and do some neat email manipulation with Perl.
-
-The goal with these tricks is to maintain a single codebase that minimizes bugs and maximizes code reuse.  He uses these tricks to support hundreds of customers from a single installation with rapid deployment across multiple servers.
-
-Key Topics:
-
-* Perl recipes for your Website
-* Perl recipes for email manipulation with MIMEDefang
-* Perl recipes for CLI Administration
-* Tricks to use the same Perl Library for all these tasks
-
-Please consider bringing your laptop to experiment with code samples."
+,,,,,,Standard Talk - 50 minutes,2,2017-06-21,09:30,10:20,Jefferson,Whatever,Any,"(cancelled)",
